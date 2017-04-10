@@ -42,6 +42,16 @@
     <Compile Include="Class1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\NF.LaGou.DAL\NF.LaGou.DAL.csproj">
+      <Project>{637a6e0a-892e-4ad9-8b2d-a0aa07fa0729}</Project>
+      <Name>NF.LaGou.DAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\NF.LaGou.Models\NF.LaGou.Models.csproj">
+      <Project>{51d28cf7-4703-4e50-a93b-9c5335c0ef19}</Project>
+      <Name>NF.LaGou.Models</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

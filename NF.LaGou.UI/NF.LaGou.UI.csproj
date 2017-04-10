@@ -224,6 +224,16 @@
   <ItemGroup>
     <Content Include="packages.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\NF.LaGou.BLL\NF.LaGou.BLL.csproj">
+      <Project>{92bdab5c-5932-48ac-8a31-dd85c64045f4}</Project>
+      <Name>NF.LaGou.BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\NF.LaGou.Models\NF.LaGou.Models.csproj">
+      <Project>{51d28cf7-4703-4e50-a93b-9c5335c0ef19}</Project>
+      <Name>NF.LaGou.Models</Name>
+    </ProjectReference>
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
