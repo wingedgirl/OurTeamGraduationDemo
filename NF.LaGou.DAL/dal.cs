@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace NF.LaGou.Models
+namespace NF.LaGou.DAL
 {
-    public class Class1
+    public class dal
     {
     }
 }

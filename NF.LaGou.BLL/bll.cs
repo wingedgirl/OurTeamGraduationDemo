@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace NF.LaGou.DAL
+namespace NF.LaGou.BLL
 {
-    public class Class1
+    public class bll
     {
     }
 }
