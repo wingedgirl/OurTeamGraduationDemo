@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace NF.LaGou.DAL
 {
-    public class 黎冠东
+    public class 黎冠东呀屎啦
     {
     }
 }
