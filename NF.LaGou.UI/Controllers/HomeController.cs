@@ -15,6 +15,10 @@ namespace NF.LaGou.UI.Controllers
         {
             return View();
         }
+        public string Hello()
+        {
+            return "Hello";
+        }
 
     }
 }
