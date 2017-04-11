@@ -126,7 +126,7 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
-    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\BetaController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -134,6 +134,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\betamaster.css" />
+    <Content Include="Content\demo.css" />
     <Content Include="Content\Guide.css" />
     <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
     <Content Include="Content\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
@@ -219,7 +220,8 @@
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Shared\beta.cshtml" />
-    <Content Include="Views\Home\NewbieGuide.cshtml" />
+    <Content Include="Views\Beta\NewbieGuide.cshtml" />
+    <Content Include="Views\Beta\Demos.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

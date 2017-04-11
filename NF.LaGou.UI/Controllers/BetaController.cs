@@ -6,7 +6,7 @@ using System.Web.Mvc;
 
 namespace NF.LaGou.UI.Controllers
 {
-    public class HomeController : Controller
+    public class BetaController : Controller
     {
         //
         // GET: /Home/
@@ -15,11 +15,11 @@ namespace NF.LaGou.UI.Controllers
         {
             return View();
         }
-        public string Hello()
-        {
-            return "Hello";
-        }
         public ActionResult NewbieGuide()
+        {
+            return View();
+        }
+        public ActionResult Demos()
         {
             return View();
         }

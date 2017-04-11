@@ -1,0 +1,125 @@
+﻿#topbg{
+    width:100%;
+    height:206px;
+    min-width:1200px;
+    margin:0 auto;
+    background:url(/Images/topbg.jpg) no-repeat center 26px #e0e9ee;
+}
+#container{
+    min-width:1200px;
+    margin:0 auto;
+}
+#createProject{
+    position :relative;
+    width:545px;
+    padding-left:35px;
+    margin:0 auto;
+    font-size:14px;
+    color:#333;
+}
+#createProject .form_item{
+    margin-top:30px;
+}
+#createProject .form_label{
+    text-indent:-35px;
+    margin:30px 0 8px;
+}
+#createProject .number{
+    display:inline-block;
+    width:20px;
+    height:20px;
+    line-height:20px;
+    margin-right:10px;
+    background-color:#2b2d2e;
+    color:#fff;
+    font-size:12px;
+    border-radius:50%;
+    text-indent:0;
+    text-align:center;
+}
+em,i{
+    font-style:normal;
+}
+#createProject .star{
+    color:#ee7b70;
+    font-size:18px;
+}
+#createProject .category{
+    zoom:1;
+    height:62px;
+}
+#createProject .category li{
+    width:119px;
+    height:60px;
+    float:left;
+    margin-left:20px;
+    cursor:pointer;
+    border:1px solid #dce0e0;
+    font-size:14px;
+    color:#999;
+    text-align:center;
+    line-height:60px;
+}
+#createProject .category li:first-child{
+    margin-left:0;
+}
+#createProject .category li.active{
+    color:#fff;
+    border-color:#3dca99;
+    background-color:#3dca99;
+}
+#createProject .form_selected{
+    position:relative;
+    cursor:pointer;
+    padding-right:36px;
+    height:auto;
+    min-height:52px;
+}
+#createProject .form_input{
+    box-sizing:border-box;
+    width:100%;
+    height:52px;
+    padding:10px 16px;
+    line-height:30px;
+    border:1px solid #dce0e0;
+    border-radius:3px;
+    background-clip:padding-box;
+    font-size:14px;
+}
+#createProject .form_selected .tips{
+    color:#999;
+}
+strong,b{
+    font-weight:400;
+}
+#createProject .form_selected .arrow{
+    position:absolute;
+    right:16px;
+    top:22px;
+    display:block;
+    width:0;
+    height:0;
+    border-width:6px;
+    border-style:solid;
+    border-color:#7d7d7d transparent transparent;
+}
+#createProject .slide{
+    position:absolute;
+    z-index:2;
+    width:545px;
+    box-sizing:border-box;
+    margin-top:2px;
+    background-color:#fff;
+    cursor:pointer;
+    border:1px solid #dce0e0;
+    border-radius:3px;
+    background-clip:padding-box;
+    box-shadow:0 2px 3px 0 rgba(0,0,0,.08);
+}
+#createProject #categorysub .slide{
+    max-height:290px;
+    overflow:scroll;
+}
+.dn{
+    display:none;
+}

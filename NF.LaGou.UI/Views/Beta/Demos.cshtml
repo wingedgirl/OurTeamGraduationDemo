@@ -1,0 +1,107 @@
+﻿@{
+    ViewBag.Title = "Demos";
+    Layout = "~/Views/Shared/beta.cshtml";
+}
+
+<link href="~/Content/demo.css" rel="stylesheet" />
+
+<div id="topbg"></div>
+<div id="container">
+    <div id="createProject">
+        <div id="categoryroot" class="form_item">
+            <div class="form_label">
+                <i class="number">1</i>
+                选择你的项目类型
+                <i class="star">*</i>
+            </div>
+            <ul class="category">
+                <li class="active">开发</li>
+                <li>设计</li>
+                <li>市场/运营</li>
+                <li>产品</li>
+            </ul>
+            <input id="firstType" type="hidden" value="开发" />
+        </div>
+        <div id="categorysub" class="form_item">
+            <div class="form_label">
+                <i class="number">2</i>
+                选择项目的二级类型
+                <i class="star">*</i>
+            </div>
+            <div class="form_selected form_input">
+                <div class="result tips">
+                    <b style="display:none;"></b>
+                    <b>请选择二级类型</b>
+                </div>
+                <i class="arrow"></i>
+            </div>
+            <ul class="slide categorysub dn">
+                <li>小程序开发</li>
+                <li>前端开发</li>
+                <li>微信开发</li>
+                <li>H5开发</li>
+                <li>后端开发</li>
+                <li>APP开发</li>
+                <li>Web网站开发</li>
+                <li>项目经理</li>
+                <li>其他开发</li>
+            </ul>
+            <input id="secondType" type="hidden" />
+        </div>
+        <div id="technique" class="form_item">
+            <div class="form_label">
+                <i class="number">3</i>
+                选择所需技能
+            </div>
+            <div class="form_selected form_input">
+                <div class="result tips">
+                    <b>请选择所需技能</b>
+                </div>
+                <i class="arrow"></i>
+            </div>
+            <ul class="slide technique dn">
+                <li class="tips">请选择“项目类型”及其二级类型</li>
+            </ul>
+            <input type="hidden" value=""/>
+        </div>
+        <div class="form_item">
+            <div class="form_label">
+                <i class="number">4</i>
+                项目名称
+                <i class="star">*</i>
+            </div>
+            <input id="projectName" class="form_input" type="text" placeholder="输入项目名称，如：电商web网站设计" />
+        </div>
+        <div class="form_item">
+            <div class="form_label">
+                <i class="number">5</i>
+                项目描述
+                <i class="star">*</i>
+                <span class="showtemplate">查看范例</span>
+            </div>
+            <div class="slide">
+                <span class="downtips"></span>
+                <h4>
+                    <i></i>
+                    一、项目描述：
+                </h4>
+                <p>直播产品的手机App开发，包括iOS和Android两端，电视节目的同品牌产品，延伸到手机屏幕，为主播们开拓第二个活动现场，为用户简历更多元的观看互动方式。主播门可以开始直播，用户观看及互动，支持在线购买商品，完成闭环支付。</p>
+                <h4>
+                    <i></i>
+                    二、主要功能点：
+                </h4>
+                <p>直播预告功能、启动直播、参与直播、商品列表、支付功能、消息通知与推送、登录注册</p>
+                <h4>
+                    <i></i>
+                    三、可参考产品：
+                </h4>
+                <p>咸鱼直播： www.xianyu.com <br>拉勾博客：www.lagou.com</p>
+                <h4>
+                    <i></i>
+                    四、人员要求：
+                </h4>
+                <p>1、有直播App产品的开发经验；<br>2、精通Java或PHP，熟悉jQuery、Javascript、Maven、Redis等技术，熟练使用MySQL等关系型数据库等；<br>3、良好的沟通能力和契约精神。</p>
+            </div>
+        </div>
+    </div>
+</div>

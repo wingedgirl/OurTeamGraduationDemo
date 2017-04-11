@@ -16,7 +16,7 @@ namespace NF.LaGou.UI
             routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",
-                defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
+                defaults: new { controller = "Beta", action = "NewbieGuide", id = UrlParameter.Optional }
             );
         }
     }
