@@ -1,0 +1,46 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <link href="~/Content/betamaster.css" rel="stylesheet" />
+</head>
+<body>
+    <div id="header">
+        <div id="innerhead">
+            <div class="headlogo">
+                <a href="#"><h1>大鲲</h1></a>
+                <i class="icons">beta</i>
+            </div>
+            <ul class="nav">
+                <li><a href="#">首页</a></li>
+                <li><a href="#">项目</a></li>
+                <li class="active" style="color:black;"><a href="#">新手指南</a></li>
+            </ul>
+            <div class="entry">
+                <div class="login">
+                    <a href="#">登录</a> / <a href="#">注册</a>
+                </div>
+                <div class="appcode">
+                    <div class="defaultapp">
+                        <img class="icons black_icon" src="/Images/iphone1.svg" width="16" height="16" />
+                        <img class="icons white_icon" src="/Images/iphone2.svg" width="16" height="16" />
+                        <img class="icons green_icon" src="/Images/iphone3.svg" width="16" height="16" />
+                        <span>大鲲APP</span>
+                    </div>
+                    <div class="qrcode">
+                        <span class="downtips"></span>
+                        <img src="/Images/down.png" width="140" height="140" />
+                        <p class="tips">下载iOS版/Android版</p>
+                    </div>
+                </div>
+                <a class="release" href="#">免费发布项目</a>
+            </div>
+        </div>
+    </div>
+    <div>
+        @RenderBody()
+    </div>
+</body>
+</html>

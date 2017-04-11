@@ -19,6 +19,9 @@ namespace NF.LaGou.UI.Controllers
         {
             return "Hello";
         }
-
+        public ActionResult NewbieGuide()
+        {
+            return View();
+        }
     }
 }
