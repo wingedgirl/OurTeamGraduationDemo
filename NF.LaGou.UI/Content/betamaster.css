@@ -127,6 +127,7 @@
         }
         #innerhead .entry .appcode .defaultapp{
             line-height:36px;
+            width:77.14px;
         }
         img{
             border:0;
@@ -136,6 +137,8 @@
         .entry .appcode .defaultapp .icons{
             margin-right:6px;
             vertical-align:middle;
+            float:left;
+            margin-top:11px;
         }
         .entry .appcode .black_icon{
             display:inline-block;
@@ -149,7 +152,6 @@
         .entry .appcode span{
             display:inline-block;
             vertical-align:middle;
-            margin-left:-4px;
         }
 
 
