@@ -103,6 +103,14 @@ strong,b{
     border-style:solid;
     border-color:#7d7d7d transparent transparent;
 }
+#createProject .form_selected.active .arrow{
+    border-color:transparent transparent #7d7d7d;
+    top:16px;
+}
+#createProject .form_input.active{
+    border-color:#3dca99;
+}
+
 #createProject .slide{
     position:absolute;
     z-index:2;
@@ -116,10 +124,139 @@ strong,b{
     background-clip:padding-box;
     box-shadow:0 2px 3px 0 rgba(0,0,0,.08);
 }
+
+#createProject .categorysub li{
+    line-height:36px;
+    padding:0 16px;
+}
+
+#createProject .categorysub li:hover{
+    background-color:#f5f6f8;
+}
+#createProject span.showtemplate{
+    text-decoration:underline;
+    float:right;
+    color:#999;
+    cursor:pointer;
+}
 #createProject #categorysub .slide{
     max-height:290px;
     overflow:scroll;
 }
 .dn{
     display:none;
+}
+#createProject .technique{
+    padding:0 0 20px 38px;
+}
+
+#createProject .technique li.tips{
+    float:none;
+    color:#999;
+}
+#createProject .technique li{
+    margin-right:50px;
+    margin-top:20px;
+}
+#createProject .form_desc .tips span{
+    font-size:14px;
+    margin-bottom:10px;
+}
+#createProject .desctemplate.dn{
+    padding:16px;
+    padding-bottom:24px;
+    margin-top:-2px;
+    cursor:text;
+}
+#createProject .desctemplate .downtips{
+    position:absolute;
+    width:16px;
+    height:7px;
+    background:url(/Images/downtips.png) no-repeat;
+    right:18px;
+    top:-7px;
+}
+
+h4{
+    margin:0;
+    font-weight:400;
+    margin:10px 0;
+}
+#createProject .slide h4{
+    font-size:14px;
+}
+#createProject .slide h4 i{
+    display:inline-block;
+    width:4px;
+    height:13px;
+    background-color:#3dca99;
+    vertical-align:middle;
+    margin:-3px 8px 0 0;
+}
+#createProject .slide p{
+    line-height:22px;
+}
+p{
+    margin:0;
+}
+#createProject .form_desc{
+    position:relative;
+}
+#createProject textarea.form_input{
+    resize:none;
+    height:184px;
+    line-height:20px;
+}
+#createProject .form_desc .tips{
+    position:absolute;
+    left:0;
+    top:0;
+    z-index:1;
+    width:100%;
+    box-sizing:border-box;
+    padding:10px 16px;
+    pointer-events:none;
+    color:#999;
+    font-size:12px;
+    line-height:26px;
+}
+#createProject .liked{
+    zoom:1;
+    padding-top:6px;
+}
+#createProject .liked li{
+    margin-right:80px;
+    float:left;
+    cursor:pointer;
+}
+#createProject .liked li i{
+    display:inline-block;
+    width:20px;
+    height:20px;
+    border-radius:50%;
+    background-clip:padding-box;
+    vertical-align:middle;
+    box-sizing:border-box;
+    border:1px solid #dce0e0;
+    margin-right:10px;
+    margin-top:-2px;
+}
+#createProject .liked li.active i{
+    border:6px solid #3dca99;
+}
+
+#createProject .btncreate{
+    display:block;
+    width:212px;
+    height:46px;
+    border-radius:24px;
+    background-clip:padding-box;
+    margin:104px auto 0;
+    text-align:center;
+    line-height:46px;
+    font-size:18px;
+    color:#fff;
+    background-color:#3dca99;
+    border:0;
+    cursor:pointer;
 }

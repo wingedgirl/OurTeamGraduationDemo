@@ -79,7 +79,7 @@
                 <i class="star">*</i>
                 <span class="showtemplate">查看范例</span>
             </div>
-            <div class="slide">
+            <div class="slide desctemplate dn">
                 <span class="downtips"></span>
                 <h4>
                     <i></i>
@@ -102,6 +102,148 @@
                 </h4>
                 <p>1、有直播App产品的开发经验；<br>2、精通Java或PHP，熟悉jQuery、Javascript、Maven、Redis等技术，熟练使用MySQL等关系型数据库等；<br>3、良好的沟通能力和契约精神。</p>
             </div>
+            <div class="form_desc">
+                <textarea id="projectDesc" class="form_input"></textarea>
+                <div class="tips">
+                    <span>详细描述你的项目需求以及对人员的期望，让专家全面的了解你想要什么。</span>
+                    <br />
+                    一、项目描述：
+                    <br />
+                    二、主要功能点：
+                    <br />
+                    三、可参考产品
+                    <br />
+                    四、人员要求
+                </div>
+            </div>
+
         </div>
+        <div id="projectPrice" class="form_item">
+            <div class="form_label">
+                <i class="number">6</i>
+                价格预算
+                <i class="star">*</i>
+            </div>
+            <div class="form_selected form_input">
+                <div class="result tips">
+                    <b style="display:none;"></b>
+                    <b>请选择项目价格预算区间</b>
+                </div>
+                <i class="arrow"></i>
+            </div>
+            <ul class="slide categorysub dn">
+                <li>3000元以下</li>
+                <li>3000-5000元</li>
+                <li>5000-10000元</li>
+                <li>10000-20000元</li>
+                <li>20000-30000元</li>
+                <li>30000-50000元</li>
+                <li>50000元以上</li>
+            </ul>
+            <input id="Price" type="hidden" value=""/>
+        </div>
+        <div id="projecttimes" class="form_item">
+            <div class="form_label">
+                <i class="number">7</i>
+                项目周期
+                <i class="star">*</i>
+            </div>
+            <div class="form_selected form_input">
+                <div class="result tips">
+                    <b style="display:none;"></b>
+                    <b>请选择项目的时间周期</b>
+                </div>
+                <i class="arrow"></i>
+            </div>
+            <ul class="slide categorysub dn">
+                <li>小于1周</li>
+                <li>1-2周</li>
+                <li>2-4周</li>
+                <li>1-3个月</li>
+                <li>3个月以上</li>
+            </ul>
+            <input id="Cycle" type="hidden" value="" />
+        </div>
+        <div class="form_item">
+            <div class="form_label">
+                <i class="number">8</i>
+                公司名称
+            </div>
+            <input id="companyName" class="form_input" type="text" placeholder="输入你的公司名称" />
+        </div>
+        <div id="prefer" class="form_item">
+            <div class="form_label">
+                <i class="number">9</i>
+                倾向让谁完成项目
+                <i class="star">*</i>
+            </div>
+            <ul class="liked">
+                <li class="active">
+                    <i></i>
+                    没有倾向
+                </li>
+                <li>
+                    <i></i>
+                    个人
+                </li>
+                <li>
+                    <i></i>
+                    团队 / 工作室
+                </li>
+            </ul>
+            <input id="temRequire" type="hidden" value="没有倾向" />
+         </div>
+        <p class="error"></p>
+        <input class="btncreate" type="button" value="发布项目" />
     </div>
 </div>
+
+<script src="~/Scripts/jquery-1.8.2.js"></script>
+<script type="text/javascript">
+    $(function () {
+        //选择你的项目类型
+        $(".category li").bind("click", function () {
+            $(".category li:not(this)").removeClass("active");
+            $(this).addClass("active");
+            var type = $(this).html();
+            $("#firstType").val(type);
+        });
+        //倾向让谁完成项目
+        $(".liked li").bind("click", function () {
+            $(".liked li:not(this)").removeClass("active");
+            $(this).addClass("active");
+            var type = $(this).text();
+            $("#temRequire").val(type);
+        });
+
+        //选择项目的二级类型等下拉框
+        $(".form_selected").bind("click", function () {
+            if ($(this).filter(this).next(".dn").css("display") == "none") {
+                $(this).filter(this).next(".dn").css("display", "block");
+                $(".form_input").filter(this).addClass("active");
+            }
+            else {
+                $(".dn").css("display", "none");
+                $(".form_input").removeClass("active");
+            }
+        });
+        //项目描述
+        $(".showtemplate").bind("click", function () {
+            if($(this).parent().next(".dn").css("display")=="none")
+            {
+                $(this).parent().next(".dn").css("display", "block");
+            }
+            else
+            {
+                $(this).parent().next(".dn").css("display", "none");
+            }
+        });
+
+
+        $("#projectDesc").mousedown(function () {
+            $(this).addClass("active");
+        });
+        
+       
+    });
+</script>

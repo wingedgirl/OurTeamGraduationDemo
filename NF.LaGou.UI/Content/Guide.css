@@ -1,4 +1,12 @@
-﻿
+﻿@font-face {
+	font-family: lagou-www;
+	src: url(//www.lgstatic.com/www/static/common/font/lagou-www_3ae2f8f.eot);
+	src: url(//www.lgstatic.com/www/static/common/font/lagou-www_3ae2f8f.eot#iefix) format('embedded-opentype'), url(//www.lgstatic.com/www/static/common/font/lagou-www_647118e.ttf) format('truetype'), url(//www.lgstatic.com/www/static/common/font/lagou-www_e19fe41.woff) format('woff'), url(//www.lgstatic.com/www/static/common/font/lagou-www_d720110.svg) format('svg');
+	font-weight: 400;
+	font-style: normal
+}
+
+
 
         #container .maintitle{
             width:100%;
@@ -46,15 +54,26 @@
             text-align:center;
         }
         .usagestep ol li .line {
-            color: #3dca99;
             position: absolute;
             left: 100%;
             bottom: 90px;
             width: 88px;
             margin-left: -44px;
             line-height: 28px;
-            border-bottom: 1px dashed #b1ead6;
             font-size: 12px;
+            border-bottom: 1px dashed #b1ead6;
+        }
+        .usagestep.employer ol li .line
+        {
+            color: #3dca99;
+        }
+        .usagestep.employee ol li .line
+        {
+            color: #ed7266;
+            border-bottom-color:#f8c7c2;
+        }
+        .usagestep li:last-child .line{
+            display:none;
         }
         .usagestep li span{
             display:block;
@@ -67,6 +86,15 @@
             margin-top:4px;
             font-size:12px;
             color:#999;
+        }
+        .usagestep.employer .icons{
+            color:#3dca99;
+        }
+        .usagestep.employee .icons{
+            color:#ed7266;
+        }
+        .usagestep li .icons{
+            font-size:32px;
         }
 
         .sub_title .more
@@ -122,6 +150,16 @@
             margin-right:18px;
             vertical-align:middle;
         }
+        [class^=icon-],[class*="icon-"]
+        {
+            font-family:bigfish_icons!important;
+            speak:none;
+            font-style:normal;
+            font-weight:400;
+            font-variant:normal;
+            text-decoration:none;
+            line-height:1;
+        }
         .usagelist li p{
             position:relative;
             line-height:24px;
@@ -146,4 +184,28 @@
             text-align:-webkit-match-parent;
         }
 
-        
+        .icon-01:before{
+            content:"\e900";
+        }
+        .icon-02:before{
+            content:"\e901";
+        }
+        .icon-03:before{
+            content:"\e902";
+        }
+        .icon-04:before{
+            content:"\e903";
+        }
+        .icon-05:before{
+            content:"\e904";
+        }
+
+        .icon-verify:before{
+            content:"\e93d";
+        }
+        .icon-watch:before{
+            content:"\e93f";
+        }
+        .icon-promise:before{
+            content:"\e932";
+        }
