@@ -23,5 +23,9 @@ namespace NF.LaGou.UI.Controllers
         {
             return View();
         }
+        public ActionResult ItemList()
+        {
+            return View();
+        }
     }
 }

@@ -226,6 +226,7 @@
     <Content Include="Views\Shared\beta.cshtml" />
     <Content Include="Views\Beta\NewbieGuide.cshtml" />
     <Content Include="Views\Beta\CreateProject.cshtml" />
+    <Content Include="Views\Beta\ItemList.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
