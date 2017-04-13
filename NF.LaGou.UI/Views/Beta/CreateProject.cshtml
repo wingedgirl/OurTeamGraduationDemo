@@ -1,9 +1,9 @@
 ﻿@{
-    ViewBag.Title = "Demos";
+    ViewBag.Title = "CreateProject";
     Layout = "~/Views/Shared/beta.cshtml";
 }
 
-<link href="~/Content/demo.css" rel="stylesheet" />
+<link href="~/Content/CreateProject.css" rel="stylesheet" />
 
 <div id="topbg"></div>
 <div id="container">
@@ -227,6 +227,22 @@
                 $(".form_input").removeClass("active");
             }
         });
+        //点击空白处，下拉框内容隐藏,并且移除类名为form_input的active类
+        $(document).bind("click", function (e) {
+            var target = $(e.target);
+
+            if (target.closest(".form_selected,.form_input").length == 0) {
+                $(".dn").not(".desctemplate").css("display", "none");
+                $(".form_input").removeClass("active");
+            }
+            e.stopPropagation();
+        });
+        //文本框点击输入时边框变色
+        $("input.form_input").bind("click",function () {
+            $(this).addClass("active");
+            $(this).not(this).removeClass("active");
+        });
+
         //项目描述
         $(".showtemplate").bind("click", function () {
             if($(this).parent().next(".dn").css("display")=="none")
@@ -243,7 +259,14 @@
         $("#projectDesc").mousedown(function () {
             $(this).addClass("active");
         });
-        
+       
+        $(".slide li").bind("click", function () {
+            var values = $(this).html();
+            $(this).parent().next("input").val(values);
+            $(this).parent().prev().children().children("b").html(values);
+            $(this).parent().prev().children().children("b").css("color", "#333");
+            $(this).parent().prev().removeClass("active");
+        });
        
     });
 </script>

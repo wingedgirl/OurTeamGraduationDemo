@@ -134,7 +134,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\betamaster.css" />
-    <Content Include="Content\demo.css" />
+    <Content Include="Content\CreateProject.css" />
     <Content Include="Content\Guide.css" />
     <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
     <Content Include="Content\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
@@ -225,7 +225,7 @@
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Shared\beta.cshtml" />
     <Content Include="Views\Beta\NewbieGuide.cshtml" />
-    <Content Include="Views\Beta\Demos.cshtml" />
+    <Content Include="Views\Beta\CreateProject.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -19,7 +19,7 @@ namespace NF.LaGou.UI.Controllers
         {
             return View();
         }
-        public ActionResult Demos()
+        public ActionResult CreateProject()
         {
             return View();
         }
