@@ -27,5 +27,9 @@ namespace NF.LaGou.UI.Controllers
         {
             return View();
         }
+        public ActionResult DefaultIndex()
+        {
+            return View();
+        }
     }
 }

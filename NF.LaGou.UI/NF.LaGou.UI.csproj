@@ -227,6 +227,7 @@
     <Content Include="Views\Beta\NewbieGuide.cshtml" />
     <Content Include="Views\Beta\CreateProject.cshtml" />
     <Content Include="Views\Beta\ItemList.cshtml" />
+    <Content Include="Views\Beta\DefaultIndex.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -1,0 +1,1314 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>DefaultIndex</title>
+    <style type="text/css">
+        * {
+            margin: 0;
+            padding: 0;
+            outline: 0;
+        }
+
+        body {
+            margin: 0;
+            margin-top: 0px;
+            margin-right: 0px;
+            margin-bottom: 0px;
+            margin-left: 0px;
+            padding: 0;
+            font-size: 14px;
+            font-family: "Hiragino Sans GB","Microsoft Yahei",SimSun,Arial,"Helvetica Neue",Helvetica;
+            color: #333;
+            word-wrap: break-word;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .f1 {
+            float: left;
+        }
+
+        div {
+            display: block;
+        }
+
+        h1, h2, h3, h4 {
+            margin: 10px 0;
+            font-weight: 400;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 24px;
+            font-weight: 400;
+            display: block;
+        }
+
+        h3 {
+            display: block;
+            font-size: 1.17em;
+            font-weight: bold;
+        }
+
+        h4 {
+            display: block;
+        }
+
+        i {
+            font-style: normal;
+        }
+
+        ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        li {
+            display: list-item;
+            text-align: -webkit-match-parent;
+        }
+
+        .fr {
+            float: right;
+        }
+
+        img {
+            border: 0;
+            vertical-align: top;
+            display: inline-block;
+        }
+
+        p {
+            margin: 0;
+            display: block;
+        }
+
+        [class^=icon-], [class*="icon-"] {
+            font-family: bigfish_icons !important;
+            speak: none;
+            font-style: normal;
+            font-weight: 400;
+            font-variant: normal;
+            text-transform: none;
+            line-height: 1;
+            -webkit-font-smoothing: antialiased;
+        }
+        /*查看详情*/
+        #top_extension {
+            width: 100%;
+            min-width: 1200px;
+            z-index: 0;
+        }
+
+        a {
+            color: #333;
+            background-color: transparent;
+            text-decoration: none;
+        }
+
+        .top_extension img {
+            display: block;
+            width: 1200px;
+            margin: 0 auto;
+        }
+        /*头部菜单*/
+        .nav_banner {
+            position: relative;
+        }
+
+        #header {
+            width: 100%;
+            min-width: 1200px;
+            height: 70px;
+            background-color: #fff;
+            border-bottom: 1px solid #c0dfdf;
+            position: relative;
+            z-index: 100;
+        }
+
+            #header.hyaline {
+                display: block;
+                position: absolute;
+                left: 0;
+                top: 0;
+                z-index: 100;
+                background-color: transparent;
+                border-bottom: 0;
+            }
+
+        #lgfree_head {
+            max-width: 1400px;
+            margin: 0 auto;
+            height: 70px;
+            padding: 17px 20px 0;
+            box-sizing: border-box:border-box;
+            zoom: 1;
+        }
+            /*头部logo图片*/
+            #lgfree_head .logo, #lgfree_head .logo a {
+                width: 100px;
+                height: 40px;
+            }
+
+        #lefree_head .logo {
+            position: relative;
+            margin-top: -2px;
+        }
+
+        .hyaline #lgfree_head .logo a {
+            background-image: url(/Images/logowhite.png);
+        }
+
+        .hyaline #lgfree_head a {
+            color: #fff;
+        }
+
+        #lgfree_head .logo a {
+            display: block;
+            background-image: url(/Images/logo.png);
+            background-repeat: no-repeat;
+            background-size: contain;
+            text-indent: -2000em;
+        }
+
+        #lgfree_head .logo .icons {
+            position: absolute;
+            top: 8px;
+            left: 108px;
+            line-height: 16px;
+            font-size: 12px;
+            color: #fff;
+            padding: 0 4px;
+            background-color: #ed7266;
+            border-radius: 2px;
+            background-clip: padding-box;
+        }
+        /*头部菜单栏*/
+        #lgfree_head .nav {
+            margin-left: 122px;
+            line-height: 36px;
+        }
+
+            #lgfree_head .nav > li {
+                position: relative;
+                margin-right: 42px;
+                float: left;
+            }
+
+                #lgfree_head .nav > li > a {
+                    font-size: 18px;
+                    vertical-align: top;
+                }
+
+                #lgfree_head .nav > li.active > a {
+                    color: #3dca99;
+                    font-weight: 700;
+                }
+
+                #lgfree_head .nav > li.active {
+                    border-bottom: 2px solid #3dca99;
+                }
+        /*头部菜单的登录注册*/
+        .hyaline #lgfree_head .free_entry {
+            color: #fff;
+        }
+
+        #lgfree_head .free_entry {
+            font-size: 18px;
+            color: #555;
+        }
+
+            #lgfree_head .free_entry .loginbar {
+                line-height: 36px;
+                font-size: 14px;
+            }
+
+            #lgfree_head .free_entry a {
+                font-size: 14px;
+            }
+        /*免费发布项目*/
+        #lgfree_head .appqrcode {
+            position: relative;
+            font-size: 14px;
+            margin-right: 24px;
+            cursor: default;
+        }
+
+            #lgfree_head .appqrcode .defaultapp {
+                line-height: 36px;
+            }
+
+            #lgfree_head .appqrcode .icons {
+                margin-right: 6px;
+                vertical-align: middle;
+            }
+
+        .hyaline #lgfree_head .appqrcode .black_icon {
+            display: none;
+        }
+
+        .hyaline #lgfree_head .appqrcode .white_icon {
+            display: inline-block;
+        }
+
+        .hyaline #lgfree_head .appqrcode .green_icon {
+            display: none;
+        }
+
+        #lgfree_head .appqrcode .defaultapp span {
+            display: inline-block;
+            vertical-align: middle;
+        }
+        /*免费发布项目隐藏的二维码*/
+        #lgfree_head .appqrcode .qrcode {
+            display: none;
+            position: absolute;
+            left: 50%;
+            top: 50px;
+            width: 156px;
+            padding: 6px 0 12px;
+            border-radius: 3px;
+            background-clip: padding-box;
+            margin-left: -78px;
+            border: 1px solid #dce0e0;
+            text-align: center;
+            background-color: #fff;
+            color: #999;
+        }
+
+        #lgfree_head .appqrcode .downtips {
+            position: absolute;
+            width: 16px;
+            height: 7px;
+            background: url(/Images/downtips.png) no-repeat;
+            left: 50%;
+            margin-left: -8px;
+            top: -7px;
+        }
+
+        #lgfree_head .free_entry .release {
+            padding: 0 20px;
+            height: 36px;
+            margin-right: 36px;
+            border-radius: 21px;
+            background-clip: padding-box;
+            text-align: center;
+            line-height: 36px;
+            font-size: 14px;
+            background-color: #2b2d2e;
+            color: #fff;
+        }
+
+        .hyaline #lgfree_head .release {
+            border: 1px solid #fff;
+            box-sizing: border-box;
+            background: 0 0;
+        }
+        /*图片轮播*/
+        #top_banner {
+            width: 100%;
+            height: 550px;
+            min-width: 1200px;
+            border-bottom: 3px solid #3dca99;
+            position: relative;
+            z-index: 0;
+        }
+
+            #top_banner .banner_list {
+                position: relative;
+                z-index: 0;
+                width: 100%;
+                height: 100%;
+                overflow: hidden;
+            }
+
+                #top_banner .banner_list > li {
+                    -webkit-transition: opacity .4s;
+                    zoom: 1;
+                    position: absolute;
+                    left: -3%;
+                    top: 0;
+                    z-index: 0;
+                    width: 106%;
+                    height: 106%;
+                    opacity: 0;
+                }
+
+                    #top_banner .banner_list > li.focus {
+                        z-index: 1;
+                        opacity: 1;
+                        animation: bigger 5s linear;
+                    }
+
+                    #top_banner .banner_list > li > img {
+                        width: auto;
+                        height: 100%;
+                    }
+            /*图片轮播蒙版*/
+            #top_banner .layer {
+                position: absolute;
+                left: 0;
+                top: 0;
+                z-index: 0;
+                width: 100%;
+                height: 100%;
+                background-color: rgba(0,0,0,.2);
+            }
+            /*图片轮播上的字体*/
+            #top_banner .slogan {
+                width: 100%;
+                position: absolute;
+                top: 165px;
+                font-size: 50px;
+                color: #fff;
+                letter-spacing: 6px;
+                text-align: center;
+                line-height: 50px;
+            }
+
+            #top_banner .supply {
+                width: 100%;
+                position: absolute;
+                top: 250px;
+                font-size: 26px;
+                line-height: 24px;
+                color: #fff;
+                text-align: center;
+            }
+
+            #top_banner .btnbar {
+                width: 1000px;
+                position: absolute;
+                left: 50%;
+                top: 330px;
+                z-index: 1;
+                margin-left: -500px;
+                text-align: center;
+            }
+
+                #top_banner .btnbar a {
+                    display: inline-block;
+                    width: 168px;
+                    height: 60px;
+                    border-radius: 30px;
+                    background-clip: padding-box;
+                    box-sizing: border-box;
+                    font-size: 18px;
+                    color: #fff;
+                    margin: 0 10px;
+                }
+
+            #top_banner .joinbtn {
+                background: 0 0;
+                border: 2px solid #eaeaeb;
+                line-height: 56px;
+            }
+
+            #top_banner .createbtn {
+                background-color: #3dca99;
+                line-height: 60px;
+            }
+            /*图片轮播*/
+
+
+
+            /*入驻专家总计*/
+            #top_banner .countcontainer {
+                position: absolute;
+                bottom: 0;
+                left: 50%;
+                margin-left: -600px;
+                width: 1200px;
+                height: 0;
+            }
+
+            #top_banner .joincount {
+                position: absolute;
+                right: 0;
+                top: 2px;
+                padding: 30px 10px;
+                min-width: 140px;
+                background-color: #3dca99;
+                color: #fff;
+                text-align: center;
+            }
+
+                #top_banner .joincount .count {
+                    font-size: 36px;
+                }
+
+        #container {
+            min-width: 1200px;
+            min-height: 500px;
+            height: 3707px;
+            margin: 0 auto;
+            background-color: #faf7f7;
+        }
+
+        #person {
+            width: 1200px;
+            margin: 0 auto;
+        }
+
+        .freeh3 {
+            font-size: 30px;
+            font-weight: 700;
+            color: #333;
+            margin: 0;
+            padding-top: 70px;
+            text-align: center;
+        }
+
+        .h3tips {
+            font-size: 16px;
+            text-align: center;
+        }
+        /*咨询顾问型专家*/
+        .freeh4 {
+            color: #333;
+            font-size: 22px;
+            text-align: center;
+            margin: 0;
+            padding: 48px 0 26px;
+        }
+
+        #person ul {
+            zoom: 1;
+        }
+        /*交付型专家*/
+        #person .personeff {
+            height: 643px;
+        }
+
+            #person .personeff .listeff {
+                zoom: 1;
+            }
+
+            #person .personeff ul {
+                width: 915px;
+                height: 540px;
+                float: left;
+                zoom: 1;
+                background-color: #cac7c7;
+            }
+
+            #person .personeff .effvertical {
+                float: right;
+                margin: 0;
+                width: 285px;
+                height: 540px;
+                background-color: #c0dfdf;
+            }
+
+        #person .listfaq > ul > li:first-child,
+        #person .listeff > ul > li:first-child,
+        #person .listteam > ul > li:first-child,
+        #person .effvertical:first-child {
+            margin-left: 0;
+        }
+        /*交付型专业团队/工作室*/
+        #container .personteam .listteam {
+            padding-bottom: 64px;
+            height: 330px;
+        }
+        /*#container .personteam{
+            height:497px;
+        }*/
+        #container .listteam > ul > li {
+            text-align: center;
+            width: 285px;
+            height: 330px;
+            background-color: #fff;
+        }
+
+        #container #person .listteam > ul > li a {
+            width: 245px;
+            height: 296px;
+            padding: 34px 20px 0;
+            position: relative;
+            z-index: 1;
+            border-radius: 6px;
+            background-color: #fff;
+            display: block;
+        }
+
+        #person .listteam > ul > li img {
+            border-radius: 3px;
+            width: 60px;
+            height: 60px;
+        }
+
+        #person .listteam > ul > li .title {
+            font-size: 18px;
+            font-weight: 700;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            word-wrap: normal;
+        }
+
+        #person .listteam .title {
+            margin-top: 18px;
+        }
+
+        #person .listteam .self_title {
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            word-wrap: normal;
+            color: #999;
+        }
+
+        #person .listteam .products {
+            margin-top: 24px;
+            line-height: 30px;
+            text-align: left;
+            padding: 0 40px;
+        }
+
+        #person .listteam > ul > li {
+            position: relative;
+            float: left;
+            margin-left: 20px;
+        }
+
+            #person .listteam > ul > li:hover {
+                box-shadow: 5px 5px 10px 2px #f5f0f0,-5px -5px 10px 2px #f5f0f0;
+                top: -2px;
+            }
+
+        #person .listteam .icon-checked {
+            font-size: 12px;
+            font-weight: 700;
+            margin-right: 18px;
+        }
+
+        .icon-checked:before {
+            content: "\e90d";
+        }
+        /*免费发布项目，成功对接专家*/
+        #projectNew {
+            background-color: white;
+        }
+
+            #projectNew .main {
+                width: 1200px;
+                margin: 0 auto;
+            }
+
+                #projectNew .main .typecont {
+                    margin: 0 auto;
+                    margin-top: 52px;
+                    text-align: center;
+                    zoom: 1;
+                    height: 244px;
+                }
+
+                    #projectNew .main .typecont > li {
+                        position: relative;
+                        width: 285px;
+                        height: 166px;
+                        padding-top: 78px;
+                        background-color: #f8f9fb;
+                        float: left;
+                        margin-left: 20px;
+                    }
+
+                        #projectNew .main .typecont > li:first-child {
+                            margin-left: 0;
+                        }
+
+            #projectNew .typecont .icons {
+                color: #000;
+                width: 42px;
+                font-size: 42px;
+            }
+
+            #projectNew .typecont .firstcont {
+                font-size: 16px;
+                font-weight: 700;
+                margin-top: 24px;
+            }
+
+            #projectNew .typecont .maincategory {
+                opacity: 0;
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                background-color: #44c99a;
+            }
+
+        .table {
+            display: table;
+        }
+
+        .table_row {
+            display: table-row;
+        }
+
+        .table_cell {
+            display: table-cell;
+        }
+
+        #projectNew .typecont .table_cell {
+            width: 100%;
+            height: 100%;
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+            vertical-align: middle;
+            padding: 0 20px;
+        }
+
+        #projectNew .typecont h4 {
+            display: inline-block;
+            font-size: 16px;
+            font-weight: 700;
+            padding-bottom: 18px;
+            border-bottom: 3px solid #333;
+        }
+
+        #projectNew .typecont .secondcont {
+            font-size: 16px;
+            line-height: 30px;
+            margin-top: 4px;
+        }
+
+        #projectNew .typecont a {
+            color: #333;
+            display: inline-block;
+        }
+        /*最新项目*/
+        .sub_title {
+            position: relative;
+        }
+
+            .sub_title .more {
+                position: absolute;
+                right: 0;
+                top: 48px;
+                line-height: 33px;
+                color: #666;
+                font-size: 16px;
+            }
+
+        #projectNew .project_list {
+            padding-bottom: 50px;
+            height: 1070px;
+            background-color: #c0dfdf;
+        }
+        /*为客户完成的项目*/
+        #ex_project {
+            width: 100%;
+            height: 540px;
+            overflow: hidden;
+        }
+
+            #ex_project .freeh3 {
+                color: #fff;
+            }
+
+            #ex_project .proContent {
+                position: relative;
+                width: 100%;
+                height: 314px;
+                padding: 50px 0 60px;
+            }
+
+            #ex_project div.prev,
+            #ex_project div.next {
+                position: absolute;
+                top: 148px;
+                width: 30px;
+                height: 55px;
+                cursor: pointer;
+                overflow: hidden;
+                text-indent: -100px;
+                background: url(/Images/prev.png) no-repeat center center;
+            }
+
+            #ex_project div.prev {
+                left: 10px;
+            }
+
+            #ex_project div.next {
+                right: 10px;
+            }
+
+            #ex_project .projectmain {
+                position: relative;
+                z-index: 1;
+                width: 1200px;
+                height: 314px;
+                margin: 0 auto;
+                -webkit-box-sizing: border-box;
+                box-sizing: border-box;
+            }
+
+            #ex_project .proContent .bg {
+                position: relative;
+                left: 0;
+                top: -540px;
+                /*z-index: -1;*/
+                width: 100%;
+                height: 540px;
+                background-color: #2f313d;
+                background-size: cover;
+            }
+        /*generalize*/
+        #generalize {
+            position: relative;
+            min-width: 1200px;
+            width: 100%;
+            height: 296px;
+            margin: 0 auto;
+            background-color: #e9ebf0;
+            overflow: hidden;
+        }
+
+            #generalize .main {
+                position: relative;
+                width: 1200px;
+                padding: 48px 0;
+                margin: 0 auto;
+                height: 200px;
+                line-height: 60px;
+            }
+
+            #generalize .listitem {
+                vertical-align: middle;
+                position: relative;
+                z-index: 1;
+                zoom: 1;
+                text-align: center;
+                width: 50%;
+            }
+
+                #generalize .listitem:nth-child(2) {
+                    border-left: 1px solid #d7d9de;
+                }
+
+            #generalize .title {
+                width: 100%;
+                margin: 0;
+                line-height: 42px;
+                font-size: 28px;
+                display: inline-block;
+                vertical-align: middle;
+            }
+
+            #generalize a {
+                text-align: center;
+                display: inline-block;
+                width: 166px;
+                height: 56px;
+                line-height: 56px;
+                border: 2px solid #3dca99;
+                -webkit-border-radius: 30px;
+                -moz-border-radius: 30px;
+                border-radius: 30px;
+                -moz-background-clip: padding;
+                -webkit-background-clip: padding-box;
+                background-clip: padding-box;
+                color: #fff;
+                font-size: 16px;
+                background-color: #3dca99;
+                margin-top: 30px;
+            }
+
+            #generalize .or {
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                z-index: 1;
+                margin-left: -16px;
+                width: 32px;
+                margin-top: -26px;
+                font-size: 18px;
+                color: #999;
+                line-height: 52px;
+                background-color: #e9ebf0;
+                text-align: center;
+            }
+        /*footer*/
+        #footer {
+            color: #ccc;
+            min-width: 1200px;
+            margin-top: 50px;
+            background-color: #fff;
+        }
+
+            #footer .inner {
+                width: 1100px;
+                height: 190px;
+                box-sizing: border-box;
+                padding-top: 40px;
+                border-top: 1px solid rgba(41,41,46,.1);
+                margin: 0 auto;
+                zoom: 1;
+            }
+
+            #footer .brand {
+                width: 166px;
+                padding-top: 52px;
+                margin-right: 96px;
+                background: url(/Images/detalogo.png) no-repeat center top;
+                background-size: 100px 40px;
+                color: #777;
+                letter-spacing: 2px;
+                text-align: center;
+                font-size: 14px;
+            }
+
+        .f1 {
+            float: left;
+        }
+
+        #footer .quicklink {
+            line-height: 30px;
+            margin-right: 56px;
+        }
+
+            #footer .quicklink a {
+                font-size: 14px;
+                color: #555;
+            }
+
+        #footer .address {
+            width: 350px;
+            float: right;
+            zoom: 1;
+        }
+
+        dl, dt, dd {
+            margin: 0;
+        }
+
+        #footer .address dt {
+            width: 130px;
+            float: left;
+            color: #666;
+            text-align: center;
+            font-size: 14px;
+        }
+
+        #footer .address dd {
+            float: right;
+            width: 196px;
+            padding-top: 2px;
+            color: #333;
+            line-height: 28px;
+            font-size: 14px;
+        }
+
+            #footer .address dd span {
+                display: inline-block;
+                opacity: .4;
+                margin-bottom: 14px;
+                font-size: 12px;
+            }
+
+        #footer .copyright {
+            color: #333;
+            font-size: 12px;
+            padding: 68px 0 30px;
+            line-height: 22px;
+            text-align: center;
+            opacity: .5;
+        }
+    </style>
+</head>
+<body>
+    <div id="top_extension" class="top_extension" style="background-color:rgb(30,47,113);">
+        <a href="#">
+            <img alt="推广图片" width="1200" src="/Images/top_extension.jpg" />
+        </a>
+    </div>
+    <div class="nav_banner">
+        <div id="header" class="hyaline">
+            <div id="lgfree_head">
+                <div class="f1 logo">
+                    <a href="/Beta/Index"><h1>大鲲</h1></a>
+                    <i class="icons">beta</i>
+                </div>
+                <ul class="f1 nav">
+                    <li class="active"><a href="#">首页</a></li>
+                    <li><a href="/Beta/ItemList">项目</a></li>
+                    <li class="myjobs">
+                        <a href="#">我的工作</a>
+                        <i class="jobtips tips dn"></i>
+                    </li>
+                    <li class="imessage">
+                        <a href="#">消息</a>
+                        <i class="imtips dn"></i>
+                    </li>
+                    <li><a href="/Beta/NewbieGuide">新手指南</a></li>
+                </ul>
+                <div class="fr free_entry">
+                    <div class="fr loginbar">
+                        <a href="#">登录</a> / <a href="#">注册</a>
+                    </div>
+                    <div class="appqrcode fr">
+                        <div class="defaultapp">
+                            <img class="icons black_icon" src="/Images/iphone1.svg" width="16" height="16" />
+                            <img class="icons white_icon" src="/Images/iphone2.svg" width="16" height="16" />
+                            <img class="icons green_icon" src="/Images/iphone3.svg" width="16" height="16" />
+                            <span>大鲲APP</span>
+                        </div>
+                        <div class="qrcode">
+                            <span class="downtips"></span>
+                            <img src="/Images/down.png" width="140" height="140" />
+                            <p class="tips">下载iOS版/Android版</p>
+                        </div>
+                    </div>
+                    <a class="fr release" href="/Beta/CreateProject">免费发布项目</a>
+                </div>
+            </div>
+        </div>
+        <div id="top_banner">
+            <ul class="banner_list">
+                <li class="focus">
+                    <img src="/Images/list1.jpg" width="1920" height="550" />
+                </li>
+                <li>
+                    <img src="/Images/list2.jpg" width="1920" height="550" />
+                </li>
+                <li>
+                    <img src="/Images/list3.jpg" width="1920" height="550" />
+                </li>
+            </ul>
+            <div class="layer"></div>
+            <div class="slogan">发布短期项目，按需雇佣互联网专家</div>
+            <div class="supply">1小时内对接专家，为你保障项目质量</div>
+            <div class="btnbar">
+                <a href="#" class="joinbtn">入驻为专家</a>
+                <a href="#" class="createbtn">免费发布项目</a>
+            </div>
+            <div class="countcontainer">
+                <div class="joincount">
+                    <div class="count">3017</div>
+                    <div class="unit">位专家已入驻</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="container">
+        <div id="person">
+            <h3 class="freeh3">他们都是行业领域里专业可信赖的专家</h3>
+            <div class="h3tips">每个专家否经过严格审核，每5位申请只有1位通过</div>
+            <div class="personfaq" style="display:none">
+                <h4 class="freeh4">咨询顾问型专家</h4>
+                <div class="listfaq"><ul></ul></div>
+            </div>
+            <div class="personeff">
+                <h4 class="freeh4">交付型专家</h4>
+                <div class="listeff">
+                    <ul></ul>
+                    <div class="effvertical">
+
+                    </div>
+                </div>
+            </div>
+            <div class="personteam">
+                <h4 class="freeh4">交付型专业团队/工作室</h4>
+                <div class="listteam">
+                    <ul>
+                        <li>
+                            <a href="#">
+                                <img class="headpic" width="60" height="60" src="/Images/headpic.png" />
+                                <div class="title">齿轮易创</div>
+                                <div class="self_title">提供更好的产品开发服务</div>
+                                <ul class="products">
+                                    <li>
+                                        <i class="icon-checked"></i>
+                                        产品设计
+                                    </li>
+                                    <li>
+                                        <i class="icon-checked"></i>
+                                        UE/UI
+                                    </li>
+                                    <li>
+                                        <i class="icon-checked"></i>
+                                        技术研发
+                                    </li>
+                                </ul>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img class="headpic" width="60" height="60" src="/Images/headpic2.png" />
+                                <div class="title">3W传播</div>
+                                <div class="self_title">总理都点赞的3w传播</div>
+                                <ul class="products">
+                                    <li>
+                                        <i class="icon-checked"></i>
+                                        爆点创意
+                                    </li>
+                                    <li>
+                                        <i class="icon-checked"></i>
+                                        活动策划
+                                    </li>
+                                    <li>
+                                        <i class="icon-checked"></i>
+                                        品牌传播
+                                    </li>
+                                </ul>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img class="headpic" width="60" height="60" src="/Images/headpic3.jpg" />
+                                <div class="title">春秋软件</div>
+                                <div class="self_title">专业的产品设计开发团队</div>
+                                <ul class="products">
+                                    <li>
+                                        <i class="icon-checked"></i>
+                                        产品设计
+                                    </li>
+                                    <li>
+                                        <i class="icon-checked"></i>
+                                        APP开发
+                                    </li>
+                                    <li>
+                                        <i class="icon-checked"></i>
+                                        Web网站开发
+                                    </li>
+                                </ul>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img class="headpic" width="60" height="60" src="/Images/headpic4.jpg" />
+                                <div class="title">爬行科技</div>
+                                <div class="self_title">用户身边的IT需求管家</div>
+                                <ul class="products">
+                                    <li>
+                                        <i class="icon-checked"></i>
+                                        信息系统
+                                    </li>
+                                    <li>
+                                        <i class="icon-checked"></i>
+                                        解决方案
+                                    </li>
+                                    <li>
+                                        <i class="icon-checked"></i>
+                                        技术研发
+                                    </li>
+                                </ul>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div id="projectNew">
+            <div class="main">
+                <h3 class="freeh3">免费发布项目，1小时内为你成功对接专家</h3>
+                <div class="h3tips">BAT级别行业专家，平台保障项目质量</div>
+                <ul class="typecont">
+                    <li>
+                        <div class="firstcont">
+                            <i class="icons icon-develop"></i>
+                            <div class="firsttype">开发</div>
+                        </div>
+                        <div class="maincategory table">
+                            <div class="table_row">
+                                <div class="table_cell">
+                                    <h4>开发</h4>
+                                    <div class="secondcont">
+                                        <a href="#">微信开发</a>
+                                        <a href="#"> / H5开发</a>
+                                        <a href="#"> / 后端开发</a>
+                                        <a href="#"> / APP开发</a>
+                                        <a href="#"> / Web网站开发</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="firstcont">
+                            <i class="icons icon-develop"></i>
+                            <div class="firsttype">设计</div>
+                        </div>
+                        <div class="maincategory table">
+                            <div class="table_row">
+                                <div class="table_cell">
+                                    <h4>设计</h4>
+                                    <div class="secondcont">
+                                        <a href="#">平面设计</a>
+                                        <a href="#"> / UI设计</a>
+                                        <a href="#"> / 交互设计</a>
+                                        <a href="#"> / 插画设计</a>
+                                        <a href="#"> / 动画设计</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="firstcont">
+                            <i class="icons icon-develop"></i>
+                            <div class="firsttype">市场/运营</div>
+                        </div>
+                        <div class="maincategory table">
+                            <div class="table_row">
+                                <div class="table_cell">
+                                    <h4>市场/运营</h4>
+                                    <div class="secondcont">
+                                        <a href="#">线上活动策划/执行</a>
+                                        <a href="#"> / APP推广</a>
+                                        <a href="#"> / 品牌定位</a>
+                                        <a href="#"> / SEO</a>
+                                        <a href="#"> / 新媒体运营</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="firstcont">
+                            <i class="icons icon-develop"></i>
+                            <div class="firsttype">产品</div>
+                        </div>
+                        <div class="maincategory table">
+                            <div class="table_row">
+                                <div class="table_cell">
+                                    <h4>产品</h4>
+                                    <div class="secondcont">
+                                        <a href="#">产品经理</a>
+                                        <a href="#"> / 产品咨询</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+                <div class="sub_title">
+                    <h4 class="freeh4">最新项目</h4>
+                    <a href="#" class="more">更多></a>
+                </div>
+                <div class="project_list">
+                    <ul></ul>
+                </div>
+            </div>
+        </div>
+        <div id="ex_project">
+            <h3 class="freeh3">我们已经为客户成功完成众多项目，大大降低成本，提升效率</h3>
+            <div class="proContent">
+                <div class="prev">上一页</div>
+                <div class="next">下一页</div>
+                <div class="projectmain">
+
+                </div>
+                <div class="bg"></div>
+            </div>
+        </div>
+        <div id="generalize">
+            <div class="main table">
+                <div class="table_row">
+                    <div class="listitem table_cell">
+                        <p class="title">
+                            你是行业里的专业人士吗？
+                            <br />
+                            想要在业余时间多一份收入吗？
+                        </p>
+                        <a href="#">入驻成为专家</a>
+                    </div>
+                    <div class="listitem table_cell">
+                        <p class="title">
+                            众多优质客户已发布项目
+                            <br />
+                            为你1小时对接行业专家
+                        </p>
+                        <a href="#">免费发布项目</a>
+                    </div>
+                </div>
+            </div>
+            <span class="or">or</span>
+        </div>
+    </div>
+
+
+    <div id="footer">
+        <div class="inner">
+            <div class="brand f1">拉勾旗下按需雇佣平台</div>
+            <ul class="quicklink f1">
+                <li><a href="#">关于大鲲</a></li>
+                <li><a href="#">用户协议</a></li>
+                <li><a href="#">大鲲APP</a></li>
+            </ul>
+            <ul class="quicklink f1">
+                <li><a href="#">新手指南</a></li>
+                <li><a href="#">意见反馈</a></li>
+                <li><a href="#">帮助中心</a></li>
+            </ul>
+            <ul class="quicklink f1">
+                <li><a href="#">信任与保障</a></li>
+                <li><a href="#">专业之道</a></li>
+                <li><a href="#">社保服务（为你提供安稳保障）</a></li>
+            </ul>
+            <dl class="address">
+                <dt>
+                    <img src="/Images/wx-qrcode.png" width="130" height="130" />
+                    <div class="tips">[ 关注大鲲公众号 ]</div>
+                </dt>
+                <dd>
+                    <p>
+                        TEL：010-56397158转8137
+                        <br />
+                        <span>(周一至周五 10:00-19:00)</span>
+                        <br />
+                        顾问邮箱：pro@lagou.com
+                        <br />
+                        顾问微信：bigfish1010
+                    </p>
+                </dd>
+            </dl>
+        </div>
+        <div class="copyright">
+            © 2016 Lagou 京ICP备14023790号-2 京公网安备11010802017116号
+            <br />
+            北京拉勾网络技术有限公司 版权所有大鲲、拉勾大鲲、大鲲拉勾
+        </div>
+    </div>
+
+
+    <script src="~/Scripts/jquery-1.8.2.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            var i = 0;
+            var lis = $(".banner_list li").length;
+            tmp = setInterval(function () {
+                $(".banner_list li").eq(i > lis - 1 ? i = 0 : i++).addClass("focus");
+                $(".banner_list li").eq(i - 1).prev().removeClass("focus");
+                $(".banner_list li").eq(i + 1).nextAll().removeClass("focus");
+                //图片的放大动画
+                $(".banner_list li.focus").children("img").animate({
+                    width: "1950px", height: "560px"
+                }, 3000);
+                //图片不显示的时候变回原来的大小
+                $(".banner_list li:not(.focus)").children("img").animate({
+                    width: "1920px", height: "550px"
+                }, 0);
+            }, 3000);
+
+
+            $(".typecont li").mouseover(function () {
+                $(this).children().eq(1).css("opacity", "1");
+            });
+            $(".typecont li").mouseleave(function () {
+                $(this).children().eq(1).css("opacity", "0");
+            });
+        });
+    </script>
+
+</body>
+</html>
