@@ -1,0 +1,56 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <style>
+        *{
+            padding:0px;
+            margin:0px;
+            outline:none;
+        }
+        ul{
+            list-style:none;
+        }
+        div{
+            display:block;
+        }
+        .pai-nav {
+            min-width: 1024px;
+            margin: 0 auto;
+            height: 85px;
+            background: #333;
+            border-bottom: 1px solid #e5e5e5;
+        }
+        .pai-nav .pai-nav-top {
+            max-width: 1308px;
+            min-width: 1024px;
+            margin: 0 auto;
+            height: 31px;
+            background: #333;
+        }
+        .pai-nav .pai-nav-top .top-left{
+            float:left;
+        }
+        .pai-nav .pai-nav-top .top-left li.nav-icon {
+            width: 10px;
+            height: 15px;
+            background:url() no-repeat
+            margin: 7px 0 0 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="pai-nav">
+        <div class="pai-nav-top">
+            <ul class="top-left">
+                <li class="nav-icon"></li>
+            </ul>
+        </div>
+    </div>
+    <div>
+        @RenderBody()
+    </div>
+</body>
+</html>
