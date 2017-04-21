@@ -268,6 +268,8 @@
     <Content Include="Views\Beta\ItemList.cshtml" />
     <Content Include="Views\Shared\_LayoutaBeta.cshtml" />
     <Content Include="Views\aBeta\Index.cshtml" />
+    <Content Include="Views\aBeta\DoucmentWin.cshtml" />
+    <Content Include="Views\aBeta\Raiders.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

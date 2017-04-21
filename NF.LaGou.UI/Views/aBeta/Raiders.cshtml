@@ -1,0 +1,370 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Raiders</title>
+    <style type="text/css">
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        img {
+            border: 0;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        ul, li, p, h2 {
+            margin: 0;
+            padding: 0;
+            font-weight: 400;
+            line-height: normal;
+            cursor: default;
+        }
+
+        p {
+            -webkit-font-smoothing: antialiased;
+            font: 14px/22px 'Hiragino Sans GB', 'Microsoft YaHei', 微软雅黑, 宋体;
+        }
+
+        div {
+            display: block;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        .container {
+            width: 832px;
+            color: rgb(51, 51, 51);
+            font: 14px/22px ' B', 'Microsoft YaHei', 微软雅黑, 宋体;
+            margin: 44px auto 0px;
+        }
+
+            .container .top {
+                width: 826px;
+                height: 110px;
+                margin: 0 auto;
+                border-bottom: 1px dashed #e2e2e2;
+            }
+
+                .container .top img {
+                    float: left;
+                    width: 98px;
+                    height: 80px;
+                    background: pink;
+                    margin-left: 375px;
+                }
+
+            .container .nav {
+                text-align: center;
+                padding-top: 28px;
+            }
+
+                .container .nav .nav-selected {
+                    color: #fff;
+                    background-color: #00b38a;
+                }
+
+                .container .nav li {
+                    display: inline-block;
+                    width: 103px;
+                    height: 35px;
+                    line-height: 35px;
+                    border: 1px solid #00b38a;
+                    border-radius: 2px;
+                }
+
+                    .container .nav li + li {
+                        margin-left: 42px;
+                    }
+
+        .nav-faq:hover {
+            color: white;
+            background-color: #00B38A;
+        }
+
+        .nav-strategy:hover {
+            color: white;
+            background-color: #00B38A;
+        }
+
+        .container .content {
+            width: 832px;
+            padding-top: 100px;
+            padding-bottom: 100px;
+            text-align: center;
+        }
+
+            .container .content .part {
+                margin-bottom: 45px;
+            }
+
+            .container .content p {
+                text-align: left;
+                margin-bottom: 30px;
+            }
+
+            .container .content .part1 img {
+                width: 758px;
+            }
+
+            .container .content .btn-strategy a {
+                color: #00b38a;
+                display: inline-block;
+                width: 160px;
+                line-height: 35px;
+                border: 1px solid #00b38a;
+                border-radius: 2px;
+            }
+
+        .container .faq-content .faq {
+            padding: 10px 0 15px;
+            border-bottom: 1px dashed #e2e2e2;
+            background-color: #fff;
+        }
+
+            .container .faq-content .faq > div {
+                margin-right: 9px;
+            }
+
+        .container .faq-content {
+            padding-top: 50px;
+            padding-bottom: 170px;
+        }
+
+            .container .faq-content .faq .icon-left-ques {
+                background: url(/yipaiimage/faq.png) 0 -50px no-repeat;
+            }
+
+            .container .faq-content .faq .icon-left {
+                float: left;
+                width: 28px;
+                height: 28px;
+                margin-left: 13px;
+            }
+
+        p {
+            margin: 0;
+        }
+
+        .container .faq-content .faq {
+            padding: 10px 0 15px;
+            border-bottom: 1px dashed #e2e2e2;
+            background-color: #fff;
+        }
+
+            .container .faq-content .faq h2 {
+                float: left;
+                margin: 0 0 0 16px;
+                font-size: 16px;
+                line-height: 28px;
+                color: #333;
+                font-weight: normal;
+            }
+
+            .container .faq-content .faq .icon-right {
+                display: inline-block;
+                width: 15px;
+                height: 15px;
+                margin-left: 30px;
+                vertical-align: middle;
+                background: url(/yipaiimage/faq.png) 0 0 no-repeat;
+            }
+
+            .container .faq-content .faq .icon-right-toggle {
+                background: url(/yipaiimage/faq.png) 0 -25px no-repeat;
+            }
+
+            .container .faq-content .faq .answer {
+                padding: 15px 0 9px;
+            }
+
+            .container .faq-content .faq .icon-left-ans {
+                background: url(/yipaiimage/faq.png) 0 -88px no-repeat;
+            }
+
+        .container .s-clearfix:after {
+            visibility: hidden;
+            display: block;
+            overflow: hidden;
+            font-size: 0;
+            height: 0;
+            content: '.';
+            clear: both;
+        }
+
+        .container .faq-content .faq p {
+            float: left;
+            width: 756px;
+            margin-left: 16px;
+            font: 14px;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+        <div class="container">
+            <div class="top">
+                <img src="/yipaiimage/strategy-logo.png" />
+            </div>
+            <ul class="nav">
+                <li class="nav-strategy nav-selected">流程攻略</li>
+                <li class="nav-faq">常见问题</li>
+            </ul>
+            <div class="faq-content" style="display: none;">
+                <div class="faq">
+                    <div class="quesiton s-clearfix">
+                        <div class="icon-left icon-left-ques"></div>
+                        <h2>
+                            2. 谁能参与一拍？
+                            <span class="icon-right"></span>
+                        </h2>
+                    </div>
+                    <div class="answer s-clearfix" style="display: none;">
+                        <div class="icon-left icon-left-ans"></div>
+                        <p>目前，拉勾一拍主要服务期望工作地点在北京、上海、广州、深圳、成都的候选人，并且具有3年+工作经验，30W+年薪的技术、产品、设计、运营、市场等互联网高端人才。</p>
+                    </div>
+                </div>
+                <div class="faq">
+                    <div class="quesiton s-clearfix">
+                        <div class="icon-left icon-left-ques"></div>
+                        <h2>
+                            3. 参与一拍我需要做什么？
+                            <span class="icon-right"></span>
+                        </h2>
+                    </div>
+                    <div class="answer s-clearfix" style="display: none;">
+                        <div class="icon-left icon-left-ans"></div>
+                        <p>so easy ~ 完善你的信息（包括简历、申请资料等），申请报名，后面的事情都交给一拍吧。在属于你的精英会场日子，简历展示1周，你需要的只是回应企业抛出的橄榄枝，选择心仪的offer，轻松完成啦!</p>
+                    </div>
+                </div>
+                <div class="faq">
+                    <div class="quesiton s-clearfix">
+                        <div class="icon-left icon-left-ques"></div>
+                        <h2>
+                            4. 精英会场的含义？
+                            <span class="icon-right"></span>
+                        </h2>
+                    </div>
+                    <div class="answer s-clearfix" style="display: none;">
+                        <div class="icon-left icon-left-ans"></div>
+                        <p>精英会场进行时，你的简历会在一拍精英会场专场展示1周，企业可在展示期间对你进行邀约。自主选择心仪的企业，与企业来一场轻松愉悦的私人专场私密约会吧。</p>
+                    </div>
+                </div>
+                <div class="faq">
+                    <div class="quesiton s-clearfix">
+                        <div class="icon-left icon-left-ques"></div>
+                        <h2>
+                            5. 一拍如何保护我的隐私？
+                            <span class="icon-right"></span>
+                        </h2>
+                    </div>
+                    <div class="answer s-clearfix" style="display: none;">
+                        <div class="icon-left icon-left-ans"></div>
+                        <p>拉勾一拍全方位保护你的隐私，并给你独有屏蔽权。你可以指定屏蔽三家企业，只对心仪企业开放完整信息。只有你接受邀请，应邀企业才能看到你的姓名及联系方式。你的简历会于规定时间自动下架，所有信息都将关闭，为你免除后顾之忧。</p>
+                    </div>
+                </div>
+                <div class="faq">
+                    <div class="quesiton s-clearfix">
+                        <div class="icon-left icon-left-ques"></div>
+                        <h2>
+                            6. 一拍私人职业顾问如何服务我？
+                            <span class="icon-right"></span>
+                        </h2>
+                    </div>
+                    <div class="answer s-clearfix" style="display: none;">
+                        <div class="icon-left icon-left-ans"></div>
+                        <p>当你申请拉勾一拍，我们便为你配备专属私人职业顾问。拿到精英会场入场券后，你的私人顾问将第一时间与你联系，帮你优化简历、撰写拉勾推荐语，将你最耀眼的一面完美展现给企业，为你实时跟进精英会场进度，及时解决你的所有问题，直到你拿到最满意的offer。</p>
+                    </div>
+                </div>
+                <div class="faq">
+                    <div class="quesiton s-clearfix">
+                        <div class="icon-left icon-left-ques"></div>
+                        <h2>
+                            7. 如果申请未通过我可以再次申请吗？
+                            <span class="icon-right"></span>
+                        </h2>
+                    </div>
+                    <div class="answer s-clearfix" style="display: none;">
+                        <div class="icon-left icon-left-ans"></div>
+                        <p>如果你暂时没有拿到入场券，有可能是简历不够完善，有可能目前开设的技能专场与你技能不太相配，有可能是参与人员过多……不要放弃哦！只要你愿意，精英会场将永远为优秀候选人开启！</p>
+                    </div>
+                </div>
+            </div>
+            <div class="content" style="display:block">
+                <div class="part1 part">
+                    <p>我们相信，高端的人才值得拥有更优质的机会。拉勾一拍专注于服务高端人才，包括产品、设计、技术、运营和市场，报名参与一拍，您将拥有专业职业顾问一对一的全程服务。</p>
+                    <img src="/yipaiimage/c_part1_new.png" />
+                </div>
+                <div class="part2 part">
+                    <p>加入一拍后，职业顾问会与主动您沟通，帮您撰写推荐语“拉勾说“，并帮您安排专场展示。</p>
+                    <img src="/yipaiimage/c_part2_new.png" />
+                </div>
+                <div class="part3 part">
+                    <p>专场开始的前一天，我们会通过邮件等途径提示您。专场开始后，我们会全程跟踪您的动态，7日内，为您即时提醒收到的每一份邀约。</p>
+                    <img src="/yipaiimage/c_part3_new.png" />
+                </div>
+                <div class="part4 part">
+                    <p>择选出您心仪的企业，请静心等待企业的面试邀约吧。</p>
+                    <img src="/yipaiimage/c_part4_new.png" />
+                </div>
+                <div class="part5 part">
+                    <p>线下沟通后，如果您与企业一拍即合，就接受企业的offer，准备加入新公司吧！</p>
+                    <img src="/yipaiimage/c_part5_new.png" />
+                </div>
+                <div class="btn-strategy">
+                    <a target="_blank" href="#">查看企业操作攻略</a>
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript">
+            $(function () {
+                $(".nav-faq").click(function () {
+                    if ($(".nav-faq").hasClass("nav-selected")) {
+                        $(".nav-faq").removeClass("nav-selected");
+                    }
+                    else {
+                        $(".nav-faq").addClass("nav-selected");
+                    }
+                    $(".nav-strategy").removeClass("nav-selected");
+                    $(".content").css({ display: "none" });
+                    $(".faq-content").css({ display: "block" });
+
+                });
+                $(".nav-strategy").click(function () {
+                    if ($(".nav-strategy").hasClass("nav-selected")) {
+                        $(".nav-strategy").removeClass("nav-selected");
+                    }
+                    else {
+                        $(".nav-strategy").addClass("nav-selected");
+                    }
+                    $(".nav-faq").removeClass("nav-selected");
+                    $(".content").css({ display: "block" });
+                    $(".faq-content").css({ display: "none" });
+
+                });
+                //				$(".faq").click(function(){
+                //					$(".answer").toggle({display:"block"}).siblings({display:"none"});
+                //					if($(".icon-right").hasClass("icon-right-toggle"))
+                //					$(".icon-right").removeClass("icon-right-toggle");
+                //					else
+                //					$(".icon-right").addClass("icon-right-toggle");
+                //				});
+                $(".quesiton").click(function () {
+                    $(this).next(".answer").slideToggle(100).siblings(".answer").slideUp(1000);
+                    $(".icon-right").toggleClass("icon-right-toggle").siblings(".icon-right").removeClass("icon-right-toggle");
+                });
+            });//end
+        </script>
+    </body>
+</html>

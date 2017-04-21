@@ -15,6 +15,13 @@ namespace NF.LaGou.UI.Controllers
         {
             return View();
         }
-
+        public ActionResult Raiders()
+        {
+            return View();
+        }
+        public ActionResult DoucmentWin()
+        {
+            return View();
+        }
     }
 }
