@@ -221,6 +221,9 @@
             if ($(this).filter(this).next(".dn").css("display") == "none") {
                 $(this).filter(this).next(".dn").css("display", "block");
                 $(".form_input").filter(this).addClass("active");
+                //点击另外下拉框时，上一个下拉框收起（手风琴效果）
+                $(".form_input").not(this).removeClass("active");
+                $(".form_input").not(this).next(".dn").css("display", "none");
             }
             else {
                 $(".dn").css("display", "none");
