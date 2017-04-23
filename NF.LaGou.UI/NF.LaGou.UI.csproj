@@ -128,6 +128,7 @@
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\aBetaController.cs" />
     <Compile Include="Controllers\BetaController.cs" />
+    <Compile Include="Controllers\LandRController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -137,6 +138,8 @@
     <Content Include="Content\betamaster.css" />
     <Content Include="Content\CreateProject.css" />
     <Content Include="Content\Guide.css" />
+    <Content Include="Content\reg.css" />
+    <Content Include="Content\style.css" />
     <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
     <Content Include="Content\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
     <Content Include="Content\themes\base\images\ui-bg_glass_55_fbf9ee_1x400.png" />
@@ -197,6 +200,38 @@
     <Content Include="font\lagou-www_3ae2f8f.eot" />
     <Content Include="font\lagou-www_647118e.ttf" />
     <Content Include="font\lagou-www_e19fe41.woff" />
+    <Content Include="Images\img\ewm.jpg" />
+    <Content Include="Images\img\lg.png" />
+    <Content Include="Images\img\next.png" />
+    <Content Include="Images\img\qq.png" />
+    <Content Include="Images\img\reg\gou.png" />
+    <Content Include="Images\img\reg\sjbk.png" />
+    <Content Include="Images\img\reg\sjgn.png" />
+    <Content Include="Images\img\reg\sx.jpg" />
+    <Content Include="Images\img\reg\xtl.jpg" />
+    <Content Include="Images\img\reg\yxbk.png" />
+    <Content Include="Images\img\reg\yxgn.png" />
+    <Content Include="Images\img\reg\yzm.jpg" />
+    <Content Include="Images\img\reg\yzmbj.jpg" />
+    <Content Include="Images\img\wb.png" />
+    <Content Include="Images\img\wx.png" />
+    <Content Include="Images\img\xt.jpg" />
+    <Content Include="Images\img\yzm\create0.jpg" />
+    <Content Include="Images\img\yzm\create1.jpg" />
+    <Content Include="Images\img\yzm\create10.jpg" />
+    <Content Include="Images\img\yzm\create11.jpg" />
+    <Content Include="Images\img\yzm\create2.jpg" />
+    <Content Include="Images\img\yzm\create3.jpg" />
+    <Content Include="Images\img\yzm\create4.jpg" />
+    <Content Include="Images\img\yzm\create5.jpg" />
+    <Content Include="Images\img\yzm\create6.jpg" />
+    <Content Include="Images\img\yzm\create7.jpg" />
+    <Content Include="Images\img\yzm\create8.jpg" />
+    <Content Include="Images\img\yzm\create9.jpg" />
+    <Content Include="Scripts\LandRJS\jquery-3.1.1.js" />
+    <Content Include="Scripts\LandRJS\reg.js" />
+    <Content Include="Views\LandR\Loging.aspx" />
+    <Content Include="Views\LandR\register.aspx" />
     <Content Include="yipaiimage\about_icons.png" />
     <Content Include="yipaiimage\app_icon.png" />
     <Content Include="yipaiimage\backtop.png" />
@@ -273,7 +308,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Images\" />
     <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
