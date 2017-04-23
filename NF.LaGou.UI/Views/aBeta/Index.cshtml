@@ -1,0 +1,377 @@
+﻿@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutaBeta.cshtml";
+}
+<style>
+    .heared {
+        width: 1347px;
+        height: 425px;
+        background: url(/yipaiimage/head.jpg) no-repeat;
+        background-size: 100% 100%;
+        text-align: center;
+    }
+
+        .heared h1 {
+            padding: 100px 0 30px;
+            font-size: 52px;
+            color: white;
+            font-weight: normal;
+        }
+
+        .heared p {
+            margin-bottom: 12px;
+            font-size: 16px;
+            line-height: 16px;
+            color: white;
+        }
+
+    .hread-control {
+        width: 1347px;
+        height: 82px;
+    }
+
+        .hread-control a {
+            width: 182px;
+            height: 48px;
+            background-color: #00b38a;
+            display: inline-block;
+            text-decoration: none;
+            line-height: 48px;
+            font-size: 18px;
+            color: white;
+            margin-top: 34px;
+            ;
+        }
+
+            .hread-control a:hover {
+                background-color: #009a76;
+            }
+
+    .about {
+        width: 1347px;
+        height: 593px;
+        text-align: center;
+    }
+
+        .about h1 {
+            font: 700 30px/45px 'å¾®è½¯é›…é»‘';
+            font-weight: normal;
+        }
+
+    .container {
+        width: 1024px;
+        height: 404px;
+        display: inline-block;
+        margin: 75px 0 114px;
+        text-align: center;
+    }
+
+    .row {
+        width: 1024px;
+        padding-top: 85px;
+    }
+
+    .about .column {
+        float: left;
+        width: 25%;
+        text-align: center;
+    }
+
+    .about .about-item {
+        position: relative;
+        display: inline-block;
+        width: 180px;
+    }
+
+    .about .fe-icon1 {
+        background: url(/yipaiimage/about_icons.png) 0 0 no-repeat;
+    }
+
+    .about .fe-icon2 {
+        background: url(/yipaiimage/about_icons.png) -100px 0 no-repeat;
+    }
+
+    .about .fe-icon3 {
+        background: url(/yipaiimage/about_icons.png) -200px 0 no-repeat;
+    }
+
+    .about .fe-icon4 {
+        background: url(/yipaiimage/about_icons.png) -300px 0 no-repeat;
+    }
+
+    .about i {
+        display: inline-block;
+        width: 90px;
+        height: 90px;
+    }
+
+    .about h3 {
+        margin-top: 27px;
+        font: 18px/32px 'å¾®è½¯é›…é»‘';
+        color: #333;
+    }
+
+    .about p {
+        margin-top: 9px;
+        font: 14px/22px 'å¾®è½¯é›…é»‘';
+        color: #777;
+        text-align: justify;
+    }
+
+    @@-webkit-keyframes hot {
+        25% {
+            -webkit-transform: translateY(-10px);
+        }
+
+        50%, 100% {
+            -webkit-transform: translateY(0);
+        }
+
+        75% {
+            -webkit-transform: translateY(10px);
+        }
+    }
+
+    @@keyframes hot {
+        25% {
+            transform: translateY(-10px);
+        }
+
+        50%, 100% {
+            transform: translateY(0);
+        }
+
+        75% {
+            transform: translateY(10px);
+        }
+    }
+
+    .about .about-item .hot {
+        position: absolute;
+        top: 110px;
+        left: 144px;
+        width: 18px;
+        height: 23px;
+        background: url(/yipaiimage/redpacket_hot.png);
+        -webkit-animation: bounce-down .8s linear infinite;
+        animation: hot .8s linear infinite;
+    }
+
+    .company {
+        width: 1347px;
+        height: 724px;
+        background-color: #f2f2f2;
+        text-align: center;
+    }
+
+        .company h1 {
+            font: 700 30px/45px 'å¾®è½¯é›…é»‘';
+            color: #333;
+            display: inline-block;
+            font-weight: normal;
+        }
+
+        .company img {
+            padding-top: 72px;
+        }
+
+    .m-carousel {
+        width: 1347px;
+        height: 360px;
+        background-color: #777777;
+    }
+
+    .part {
+        padding: 75px 0 229px;
+    }
+
+        .part.part1 {
+            width: 1024px;
+            height: 368px;
+        }
+
+    .part1 {
+        margin: 0 auto;
+        width: 1024px;
+    }
+
+        .part1 h2 {
+            margin-bottom: 85px;
+        }
+
+    .part .step-wrapper {
+        display: inline-block;
+        width: 1024px;
+    }
+
+    .clearfix {
+        display: block !important;
+    }
+
+    .part1 .step-wrapper .step {
+        width: 180px;
+        padding: 0 10px;
+    }
+
+    .part .step-wrapper .step {
+        float: left;
+    }
+
+    .part1 .step-wrapper .step.step1 i {
+        background-position: 0 0;
+    }
+
+    .part1 .step-wrapper .step.step2 i {
+        background-position: 0 -52px;
+    }
+
+    .part1 .step-wrapper .step.step3 i {
+        background-position: 0 -104px;
+    }
+
+    .part1 .step-wrapper .step.step4 i {
+        background-position: 0 -156px;
+    }
+
+    .part1 .step-wrapper .step i {
+        display: block;
+        margin: 0 auto;
+        width: 53px;
+        height: 42px;
+        color: #00c195;
+        text-align: center;
+        line-height: 52px;
+        font-style: normal;
+        font-size: 52px;
+        font-weight: 500;
+        text-indent: -99999px;
+        background: url(/yipaiimage/icon_number.png) no-repeat center;
+    }
+
+    .part1 .step-wrapper .step h3 {
+        margin-top: 33px;
+        font-size: .5625px 'å¾®è½¯é›…é»‘';
+    }
+
+    .part1 .step-wrapper .step p {
+        margin-top: 6px;
+        font-size: 14px;
+        text-align: justify;
+        text-justify: inter-ideograph;
+        color: #777;
+        word-break: normal;
+    }
+
+    .part1 .step-wrapper .arror {
+        float: left;
+        width: 50px;
+    }
+
+        .part1 .step-wrapper .arror i {
+            position: relative;
+            left: -67px;
+            margin-top: -20px;
+            display: block;
+            height: 50px;
+            line-height: 35px;
+            width: 183px;
+            text-align: center;
+            font-style: normal;
+            background: url(/yipaiimage/icon_step_tip.png) no-repeat;
+        }
+
+
+
+</style>
+<div class="heared">
+    <h1>拉勾一拍，重新定义互联网人才拍卖</h1>
+    <p>[ 3年+工作经验，30W+年薪，互联网技术、产品、设计、运营、市场 ]</p>
+    <p>1V1专业顾问私人订制</p>
+    <p>限时展示，风尖互联网企业机会任你选</p>
+
+    <div class="hread-control">
+        <a href="">我要申请</a>
+    </div>
+</div>
+<div class="about">
+    <div class="container">
+        <h1>大咖专场</h1>
+        <div class="row">
+            <div class="column">
+                <div class="about-item">
+                    <i class="fe-icon1"></i>
+                    <h3>你的Boss你来挑</h3>
+                    <p>采用企业邀约制，聚集众多优质企业参与，让出色的你获得最大的选择权。</p>
+                </div>
+            </div>
+            <div class="column">
+                <div class="about-item">
+                    <i class="fe-icon2"></i>
+                    <h3>个性化定制服务</h3>
+                    <p>每位用户指定一位专属顾问全程跟踪服务；根据用户的独特情况，提供个性化的职业咨询。换工作不再费心费力。</p>
+                </div>
+            </div>
+            <div class="column">
+                <div class="about-item">
+                    <i class="fe-icon3"></i>
+                    <h3>保障隐私防打扰</h3>
+                    <p>不必担心隐私泄露，私密信息保护、屏蔽企业权力让你无后顾之忧。</p>
+                </div>
+            </div>
+            <div class="column">
+                <div class="about-item">
+                    <i class="fe-icon4"></i>
+                    <h3>反馈Offer</h3>
+                    <i class="hot"></i>
+                    <p>获得Offer之后，可以反馈给顾问，顾问可以提供进一步的资讯服务。</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="company">
+    <div class="container">
+        <h1>参与企业	</h1>
+        <div class="image">
+            <img src="/yipaiimage/company_logo.png" width="1024" height="410" />
+        </div>
+    </div>
+</div>
+<div class="m-carousel">
+
+</div>
+<div class="part part1">
+    <h2>一拍流程</h2>
+    <div class="step-wrapper clearfix">
+        <div class="step step1">
+            <i></i>
+            <h3>一拍报名</h3>
+            <p>注册、填写基本信息并提交申请。一拍顾问会在2个工作日内通知你报名结果［在这期间，你可以进一步完善在线简历来提高通过几率］。</p>
+        </div>
+        <div class="arror">
+            <i>2天</i>
+        </div>
+        <div class="step step2">
+            <i></i>
+            <h3>专属定制</h3>
+            <p>报名成功后，一拍会为你配备专属私人顾问，进一步沟通了解你的需求，并协助完善你的个人资料，安排你进入一拍专场。</p>
+        </div>
+        <div class="arror">
+            <i>1天</i>
+        </div>
+        <div class="step step3">
+            <i></i>
+            <h3>精英会场</h3>
+            <p>你的简历会安排在一拍精英会场专场展示1周。对你感兴趣的企业会发出邀约，你可以接受心仪企业的邀约，或先进行私信沟通，你也可以拒绝不感兴趣的约见。</p>
+        </div>
+        <div class="arror">
+            <i>7天</i>
+        </div>
+        <div class="step step4">
+            <i></i>
+            <h3>线下面试</h3>
+            <p>你同意约见的企业会与你沟通并确定面试时间，贴心的一拍顾问会为你备好专车，送你到达面试地点。同时一拍顾问全程1V1服务，协助你拿到满意的offer。</p>
+        </div>
+
+    </div>
+</div>

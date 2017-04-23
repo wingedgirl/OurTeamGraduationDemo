@@ -1,0 +1,111 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>MainMaster</title>
+</head>
+<link rel="stylesheet" type="text/css" href="css/StyleSheet1.css" />
+<body>
+    <div id="div1">
+        <img style="height: 18px; width: 12px; position: relative;top: 6px;left: 3%;" src="img/app_icon_0495d1d.png" />
+        <a id="a1" href="#">拉勾APP</a>
+        <a style="position: relative;color: dimgray;font-size: 15px; top: 3px; left: 3%;">|</a>
+        <a id="a2" href="#">进入企业版</a>
+        <a id="a3" href="#">消息</a>
+        <a style="position: relative;color: dimgray;font-size: 15px; top: 3px; left: 62%;">|</a>
+        <a class="a2" href="#">我的简历</a>
+        <a style="position: relative;color: dimgray;font-size: 15px; top: 3px; left: 62%;">|</a>
+        <a class="a2" href="#">投递箱</a>
+        <a style="position: relative;color: dimgray;font-size: 15px; top: 3px; left: 62%;">|</a>
+        <a class="a2" href="#">收藏夹</a>
+        <a style="position: relative;color: dimgray;font-size: 15px; top: 3px; left: 62%;">|</a>
+        <span id="span1">用户</span>
+        <i id="i1"></i>
+        <li id="li0">
+            <ul>
+                <li class="li2" id="li3"><a href="#">我的订阅</a></li>
+                <li class="li2" id="li4"><a href="#">职位邀请</a></li>
+                <li class="li2" id="li5"><a href="#">账号设置</a></li>
+                <li class="li2" id="li6"><a href="#">去企业版</a></li>
+                <li class="li2" id="li7"><a href="#">退出</a></li>
+            </ul>
+        </li>
+    </div>
+    <div id="div2">
+        <img style="position: relative;top:10px;left: 12%;" src="img/logo_1c5763c.png" />
+        <span id="span2" style="color: #333;font-size: 18px;position: relative;left: 13%;">广州站</span>
+        <a id="link" style="color:#999; font-size:12px;position: relative;left: 13%;text-decoration: none;" href="#">[切换城市]</a>
+        <ul id="ul1" style="width: 406px;height: 54px;position: relative;left: 33%;bottom: 42px;">
+            <li id="l1" style="border-bottom: 2px solid #00b38a;color: #333333;"><a>首页</a></li>
+            <li id="l2" style="position: relative;left: 4%;"><a>公司</a></li>
+            <li id="l3" style="position: relative;left: 8%;"><a>一拍</a></li>
+            <li id="l4" style="position: relative;left: 12%;"><a>言职</a></li>
+            <li id="l5" style="position: relative;left: 16%;"><a>大鲲</a></li>
+        </ul>
+    </div>
+    <div id="temp">
+        <div id="mark">
+            <div id="div3">
+                <li style="list-style-type:none;position: relative;left: 5%; top: 30%;">切换城市</li>
+                <a id="xx" href="#">×</a>
+            </div>
+            <div id="div4">
+                <li style="list-style-type: none;font-size: 20px;position: relative;top: 6%;left: 5%;">亲爱的用户你好:</li>
+                <li style="list-style-type: none;font-size: 18px;position: relative;left: 5%;top: 8%;">切换城市分站，让我们为你提供更准确的职位信息</li>
+                <li style="list-style-type: none;font-size: 14px;position: relative;top: 18%;left: 5%;color: #696969;">点击进入 </li>
+                <div style="height: 50px;width: 100px;border-style: solid;border-color: #00B38A; position: relative;top: 10%;left: 20%;">
+                    <li id="zhandian" style="position: relative;top: 30%;list-style-type: none;font-size: 14px;left: 25%;">广州站</li>
+                </div>
+                <li style="list-style-type: none;font-size: 14px;position: relative; left: 46%;">or 切换到以下城市</li>
+                <div id="divv1">
+                    <li class="lijs" id="lizhi1" value="全国站">全国站</li>
+                </div>
+                <div id="divv2">
+                    <li class="lijs">上海站</li>
+                </div>
+                <div id="divv3">
+                    <li class="lijs">杭州站</li>
+                </div>
+                <div id="divv4">
+                    <li class="lijs">北京站</li>
+                </div>
+                <div id="divv5">
+                    <li class="lijs">深圳站</li>
+                </div>
+                <div id="divv6">
+                    <li class="lijs">成都站</li>
+                </div>
+                <li style="list-style-type: none;font-size: 14px;color: #999999; position: relative;left: 5%;top: -28%;">其他城市开通中，敬请期待</li>
+            </div>
+        </div>
+    </div>
+    <script src="~/Scripts/jquery-3.1.1.js"></script>
+    <script>
+        var zhi;
+
+        window.onload = function () {
+            document.getElementById("link").onclick = function () {
+                document.getElementById("temp").style.visibility = "visible";
+                document.getElementById("mark").style.visibility = "visible";
+            }
+            document.getElementById("xx").onclick = function () {
+                document.getElementById("temp").style.visibility = "hidden";
+                document.getElementById("mark").style.visibility = "hidden";
+            }
+            document.getElementById("divv1").onclick = function () {
+                document.getElementById("temp").style.visibility = "hidden";
+                document.getElementById("mark").style.visibility = "hidden";
+                var zhi = $("#lizhi1").val();
+                document.getElementById("span2").value = zhi;
+                $('span2').val(zhi);
+            }
+
+        }
+    </script>
+</body>
+</html>

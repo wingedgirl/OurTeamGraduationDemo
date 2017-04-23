@@ -1,0 +1,726 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <style type="text/css">
+        * {
+            padding: 0;
+            margin: 0;
+            outline: none;
+        }
+
+        i {
+            font-style: italic;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        body {
+            font: 14px/22px "Hiragino Sans GB", "Microsoft YaHei", "å¾®è½¯é›…é»‘", "å®‹ä½“";
+            font: 14px/22px "å¾®è½¯é›…é»‘", "å®‹ä½“", Arial;
+        }
+
+        h1 {
+            transition: color, background-color, border-color .3s;
+            -webkit-margin-before: 0.67em;
+            -webkit-margin-after: 0.67em;
+            -webkit-margin-start: 0px;
+            -webkit-margin-end: 0px;
+        }
+
+        h2 {
+            font: 700 30px/45px 'å¾®è½¯é›…é»‘';
+            text-align: center;
+            display: block;
+            -webkit-margin-before: 0.83em;
+            -webkit-margin-after: 0.83em;
+            -webkit-margin-start: 0px;
+            -webkit-margin-end: 0px;
+        }
+
+        h1,
+        h2,
+        h3 {
+            margin: 0;
+            padding: 0;
+            font-weight: 400;
+            line-height: normal;
+            cursor: default;
+            text-align: center;
+        }
+        /*h3{
+            display: block;
+            font-size: 1.17em;
+            -webkit-margin-before: 1em;
+            -webkit-margin-after: 1em;
+            -webkit-margin-start: 0px;
+            -webkit-margin-end: 0px;
+            font-weight: normal;
+        }*/
+
+        p {
+            display: block;
+            -webkit-margin-after: 1em;
+            -webkit-margin-start: 0px;
+            -webkit-margin-end: 0px;
+        }
+
+        div {
+            display: block;
+        }
+
+        div {
+            display: block;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        em {
+            font-style: normal;
+        }
+
+        li {
+            display: list-item;
+            text-align: -webkit-match-parent;
+        }
+
+        .pai-nav {
+            min-width: 1024px;
+            margin: 0 auto;
+            height: 85px;
+            background: #333;
+            border-bottom: 1px solid #e5e5e5;
+        }
+
+            .pai-nav .pai-nav-top {
+                max-width: 1308px;
+                min-width: 1024px;
+                margin: 0 auto;
+                height: 31px;
+                background: #333;
+            }
+
+                .pai-nav .pai-nav-top .top-left {
+                    float: left;
+                }
+
+                    .pai-nav .pai-nav-top .top-left li.nav-icon {
+                        width: 10px;
+                        height: 15px;
+                        background: url(/yipaiimage/app_icon.png) no-repeat;
+                        margin: 7px 0 0 10px;
+                    }
+
+                    .pai-nav .pai-nav-top .top-left li {
+                        float: left;
+                        height: 31px;
+                    }
+
+                        .pai-nav .pai-nav-top .top-left li a.lagou-app {
+                            padding-left: 7px;
+                            color: #08d7a2;
+                        }
+
+                        .pai-nav .pai-nav-top .top-left li a {
+                            display: inline-block;
+                            color: #c4c3c3;
+                            line-height: 15px;
+                            padding: 0 12px;
+                            margin: 7px 0 0;
+                            font-size: 14px;
+                        }
+
+                    .pai-nav .pai-nav-top .top-left em {
+                        float: left;
+                        width: 1px;
+                        height: 14px;
+                        background: #5d5d5d;
+                        margin-top: 7px;
+                    }
+                    .pai-nav .pai-nav-top .top-left li a:hover{
+                        color:#fff;
+                    }
+
+                .pai-nav .pai-nav-top .top-right {
+                    float: right;
+                    position: relative;
+                }
+
+                    .pai-nav .pai-nav-top .top-right li {
+                        float: left;
+                        position: relative;
+                    }
+
+                        .pai-nav .pai-nav-top .top-right li a {
+                            display: inline-block;
+                            color: #c4c3c3;
+                            text-decoration: none;
+                            text-align: center;
+                            line-height: 15px;
+                            padding: 0 12px;
+                            margin: 7px 0 0;
+                        }
+
+                            .pai-nav .pai-nav-top .top-right li a:hover {
+                                color: #FAFAFA;
+                            }
+
+            .pai-nav a {
+                font: 14px/22px "Hiragino Sans GB","Microsoft Yahei",SimSun,Arial;
+                -webkit-font-smoothing: antialiased;
+            }
+
+            .pai-nav .pai-nav-top .top-right em {
+                float: left;
+                width: 1px;
+                height: 14px;
+                background: #5d5d5d;
+                margin-top: 7px;
+            }
+
+            .pai-nav .pai-nav-bottom {
+                font-size: 18px;
+                min-width: 1024px;
+                margin: 0 auto;
+                height: 54px;
+                background: #fafafa;
+                border-bottom: 1px solid #f3f3f3;
+            }
+
+                .pai-nav .pai-nav-bottom .nav-wrapper {
+                    position: relative;
+                    width: 1024px;
+                    height: 54px;
+                    margin: 0 auto;
+                }
+
+                    .pai-nav .pai-nav-bottom .nav-wrapper .bottom-left {
+                        float: left;
+                        width: 258px;
+                    }
+
+                        .pai-nav .pai-nav-bottom .nav-wrapper .bottom-left li.pai-lagou {
+                            width: 97px;
+                            margin: 10px 12px 0 0;
+                            background: url(/yipaiimage/logo.png) no-repeat;
+                        }
+
+                        .pai-nav .pai-nav-bottom .nav-wrapper .bottom-left li {
+                            float: left;
+                            width: 116px;
+                            height: 54px;
+                            font-size: 24px;
+                        }
+
+                        .pai-nav .pai-nav-bottom .nav-wrapper .bottom-left em {
+                            float: left;
+                            width: 1px;
+                            height: 31px;
+                            background: #e1e1e1;
+                            margin-top: 11px;
+                        }
+
+                        .pai-nav .pai-nav-bottom .nav-wrapper .bottom-left li a {
+                            display: inline-block;
+                            height: 54px;
+                            color: #00b38a;
+                            text-decoration: none;
+                            text-align: center;
+                            font-size: 24px;
+                            line-height: 54px;
+                            padding: 0 13px;
+                        }
+
+                    .pai-nav .pai-nav-bottom .nav-wrapper .bottom-right {
+                        float: left;
+                    }
+
+                        .pai-nav .pai-nav-bottom .nav-wrapper .bottom-right li.active {
+                            background: #00b38a;
+                        }
+
+                            .pai-nav .pai-nav-bottom .nav-wrapper .bottom-right li.active a {
+                                color: #333333;
+                            }
+
+                        .pai-nav .pai-nav-bottom .nav-wrapper .bottom-right li:hover {
+                            background: #00B38A;
+                        }
+
+                        .pai-nav .pai-nav-bottom .nav-wrapper .bottom-right li a:hover {
+                            color: #333333;
+                        }
+
+                        .pai-nav .pai-nav-bottom .nav-wrapper .bottom-right li {
+                            position: relative;
+                            float: left;
+                            height: 55px;
+                            margin: 0 16px;
+                        }
+
+                            .pai-nav .pai-nav-bottom .nav-wrapper .bottom-right li a {
+                                display: inline-block;
+                                height: 53px;
+                                color: #999;
+                                background: #fafafa;
+                                text-align: center;
+                                line-height: 53px;
+                                padding: 0 6px;
+                                font-size: 18px;
+                            }
+
+                    .pai-nav .pai-nav-bottom .nav-wrapper #nav-go-back {
+                        position: absolute;
+                        top: 0;
+                        padding-left: 30px;
+                        background: url(/yipaiimage/gobackhover.jpg) no-repeat 0 -1px;
+                        font-size: 14px;
+                        height: 30px;
+                        line-height: 30px;
+                        margin: 14px 0;
+                        right: 0;
+                        color: #999;
+                        opacity: 0.5;
+                    }
+
+                        .pai-nav .pai-nav-bottom .nav-wrapper #nav-go-back:hover {
+                            background: url(/yipaiimage/gobackhover.jpg) no-repeat 0px -1px;
+                            color: #333;
+                            opacity: 1;
+                        }
+
+        .foot-banner {
+            width: 1347px;
+            height: 90px;
+            background-color: #F2F2F2;
+        }
+
+            .foot-banner .wrapper {
+                position: relative;
+                width: 1024px;
+                margin: 0 auto;
+            }
+
+                .foot-banner .wrapper p {
+                    line-height: 90px;
+                    font-size: 30px;
+                    font-weight: 300;
+                    color: #00c195;
+                }
+
+                .foot-banner .wrapper .btn {
+                    position: absolute;
+                    top: 20px;
+                    right: 0;
+                    border-color: #00b38a;
+                }
+
+        .btn {
+            display: inline-block;
+            padding: 0 20px;
+            height: 46px;
+            min-width: 140px;
+            line-height: 46px;
+            font-size: 16px;
+            text-align: center;
+            border: 2px solid #fff;
+            color: #00B38A;
+        }
+
+        .btn-apply:hover {
+            background-color: #00B38A;
+            color: #FFFFFF;
+        }
+
+        #footer {
+            background-color: #fff;
+            position: relative;
+            z-index: 1001;
+            clear: both;
+            height: 68px;
+            border-top: 1px solid #ebebeb;
+            line-height: 36px;
+        }
+
+            #footer .wrapper {
+                width: 1024px;
+                margin: 0 auto;
+                position: relative;
+                padding-left: 0;
+            }
+
+            #footer .footer-lagou-logo {
+                position: absolute;
+                left: 0px;
+                top: 9px;
+                display: block;
+                background: url(/yipaiimage/footer_lagou_icon.png) no-repeat;
+                width: 198px;
+                height: 19px;
+            }
+
+            #footer .inner-wrapper {
+                float: left;
+                padding-top: 12px;
+                padding-left: 240px;
+                width: 860px;
+                height: 14px;
+                line-height: 14px;
+            }
+
+                #footer .inner-wrapper .footer-app {
+                    position: relative;
+                    display: block;
+                    padding-right: 25px;
+                }
+
+
+                #footer .inner-wrapper a,
+                #footer .inner-wrapper span.tel {
+                    float: left;
+                    margin-right: 15px;
+                    color: #555;
+                    font-size: 14px;
+                    text-decoration: none;
+                }
+
+            #footer a {
+                padding: 0 5px;
+            }
+
+        .footer-app span {
+            position: absolute;
+            left: 64px;
+            top: -1px;
+            display: block;
+            background: url(/yipaiimage/new_v1_534bcc8.png) no-repeat;
+            width: 30px;
+            height: 16px;
+            margin-left: 3px;
+            vertical-align: text-top;
+        }
+
+        .footer-i-view {
+            display: none;
+            border: 3px solid #0D9572;
+            background: url(/yipaiimage/qrcode_v2.jpg) no-repeat;
+            width: 256px;
+            height: 256px;
+            position: absolute;
+            bottom: 20px;
+            left: 0;
+            z-index: 1006;
+        }
+
+        .footer-qr {
+            position: relative;
+        }
+
+        .footer-i-weix {
+            display: none;
+            border: 3px solid #0D9572;
+            background: url(/yipaiimage/qrcode.jpg) no-repeat;
+            width: 242px;
+            height: 242px;
+            position: absolute;
+            bottom: 20px;
+            left: 0;
+            z-index: 1001;
+        }
+
+        #footer span em {
+            font-size: 13px;
+            font-style: normal;
+        }
+
+        #footer .coy {
+            clear: both;
+            height: 12px;
+            margin: 0 auto;
+            padding-top: 15px;
+            padding-bottom: 14px;
+            color: #d5d5d5;
+            font-size: 12px;
+            line-height: 12px;
+            text-align: center;
+        }
+
+            #footer .coy a {
+                padding-right: 0;
+                font-size: 12px;
+                color: #d5d5d5;
+            }
+
+        #backtop {
+            display: none;
+            background: url(/yipaiimage/backtop.png) 0 0 no-repeat;
+            width: 28px;
+            height: 64px;
+            position: fixed;
+            bottom: 220px;
+            margin-left: 548px;
+            cursor: pointer;
+        }
+
+            #backtop:hover {
+                background: url(/yipaiimage/backtop.png) -28px 0 no-repeat;
+            }
+
+        #product-pk {
+            width: 50px;
+            height: 50px;
+            position: fixed;
+            bottom: 80px;
+            margin-left: 1050px;
+            cursor: pointer;
+            z-index: 21;
+        }
+
+        #feebback-icon {
+            position: relative;
+        }
+
+            #feebback-icon .fb-icon {
+                width: 30px;
+                height: 30px;
+                margin: 0 auto;
+                background: url(/yipaiimage/feedback.png) left center no-repeat;
+                background-position: 0 0px;
+            }
+
+            #feebback-icon span {
+                font-size: 12px;
+            }
+
+            #feebback-icon:hover .fb-icon {
+                background-position: 0 -31px;
+            }
+
+        #webchatmoor {
+            margin: 0px;
+            padding: 0px;
+            width: 320px;
+            height: 542px;
+            border-width: 0px;
+            border-radius: 3px;
+            transition: height .5s ease-out;
+            z-index: 99999;
+            bottom: 0px;
+            right: 0px;
+            position: fixed;
+            display: none;
+        }
+
+        iframe {
+            border-image-source: initial;
+            border-image-slice: initial;
+            border-image-width: initial;
+            border-image-outset: initial;
+            border-image-repeat: initial;
+            border-width: 2px;
+            border-style: inset;
+            border-color: initial;
+        }
+    </style>
+    <script src="~/Scripts/jquery-1.8.2.js"></script>
+</head>
+<body>
+    <div class="pai-nav">
+        <div class="pai-nav-top">
+            <ul class="top-left">
+                <li class="nav-icon"></li>
+                <li class="click-track">
+                    <a href="#" class="lagou-app">拉勾APP</a>
+                </li>
+                <em></em>
+                <li class="click-track">
+                    <a href="#">我要招人</a>
+                </li>
+            </ul>
+            <ul class="top-right">
+                <li class="click-track">
+                    <a href="#">登录</a>
+                </li>
+                <em></em>
+                <li class="click-track">
+                    <a href="#">注册</a>
+                </li>
+            </ul>
+        </div>
+        <div class="pai-nav-bottom">
+            <div class="nav-wrapper">
+                <ul class="bottom-left">
+                    <a href="#" id="birthdayIcon">
+                        <li class="pai-lagou"></li>
+                    </a>
+                    <em></em>
+                    <li>
+                        <a href="#">一拍</a>
+                    </li>
+                </ul>
+                <ul class="bottom-right">
+                    <li class="click-li active" onclick="trackMonitor('l-index-nav');" event-name="l-index-nav">
+                        <a href="/abeta/index">首页</a>
+                    </li>
+                    <li class="click-li" onclick="Secondpage()">
+                        <a href="#">一拍攻略</a>
+                    </li>
+                </ul>
+                <a href="https://www.lagou.com" id="nav-go-back" onclick="trackMonitor('l-backlagou-text')">回拉勾</a>
+            </div>
+        </div>
+    </div>
+        <div id="center-body">@RenderBody()</div>
+    <div class="foot-banner">
+        <div class="wrapper">
+            <p>一拍 · 即合，真的一拍即合</p>
+            <a href="" class="btn btn-apply">我要申请</a>
+        </div>
+    </div>
+    <div id="footer">
+        <div class="wrapper">
+            <i class="footer-lagou-logo"></i>
+            <div class="inner-wrapper">
+                <a href="#" class="footer-app click_track">
+                    拉钩APP
+                    <span></span>
+                    <i class="footer-i-view" id="a2" style="display: none;opacity: 1; "></i>
+                </a>
+                <a href="#" class="click_track">拉钩微博</a>
+                <a href="#" class="footer-qr click_track" onmousemove="changerweix()" onmouseout="changerweix2()">
+                    拉勾微信
+                    <i class="footer-i-weix" id="weix" style="display: none opacity: 1;"></i>
+                </a>
+                <a href="#" class="click_track">版本更新</a>
+                <a href="#" class="click_track">帮助中心</a>
+                <a href="#" class="click_track">联系我们</a>
+                <a href="#" class="click_track">在线交流</a>
+                <span class="tel">
+                    服务热线：
+                    <em>400-628-2835 (9:00 -19:00)</em>
+                </span>
+            </div>
+            <div class="coy">
+                <span>
+                    <em>&copy;</em>
+                    2016 Lagou
+                </span>
+                <a cla>京ICP备14023790号-2</a>
+                <span>京公网安备11010802017116号</span>
+            </div>
+        </div>
+    </div>
+    <div class="top-wrapper" style="width: 1024px;margin: 0 auto;">
+        <a style="margin-left: 1060px;bottom: 140px;display: inline;" id="backtop" title="回到顶部" rel="nofollow"></a>
+        <div id="product-pk">
+            <div id="feebback-icon" class="click_track">
+                <div class="fb-icon"></div>
+                <span>我要反馈</span>
+            </div>
+        </div>
+    </div>
+    <iframe src="/abeta/DoucmentWin" id="webchatmoor"></iframe>
+    <script type="text/javascript">
+        window.onload = function () {
+            var obtn = document.getElementById('backtop'); //获取回到顶部按钮的ID
+            obtn.style.display = "none";
+            var clientHeight = document.documentElement.clientHeight; //获取可视区域的高度
+            var timer = null; //定义一个定时器
+            var isTop = true; //定义一个布尔值，用于判断是否到达顶部
+
+            window.onscroll = function () { //滚动条滚动事件
+
+                //获取滚动条的滚动高度
+                var osTop = document.documentElement.scrollTop || document.body.scrollTop;
+                var tops = 1;
+
+                if (osTop >= clientHeight) { //如果滚动高度大于可视区域高度，则显示回到顶部按钮
+                    obtn.style.display = 'block';
+                } else { //否则隐藏
+                    obtn.style.display = 'none';
+                }
+
+                //主要用于判断当 点击回到顶部按钮后 滚动条在回滚过程中，若手动滚动滚动条，则清除定时器
+                if (!isTop) {
+
+                    clearInterval(timer);
+                }
+                isTop = false;
+
+            }
+
+            obtn.onclick = function () { //回到顶部按钮点击事件
+                //设置一个定时器
+                timer = setInterval(function () {
+                    //获取滚动条的滚动高度
+                    var osTop = document.documentElement.scrollTop || document.body.scrollTop;
+                    //用于设置速度差，产生缓动的效果
+                    var speed = Math.floor(-osTop / 10);
+                    document.documentElement.scrollTop = document.body.scrollTop = osTop + speed;
+                    isTop = true; //用于阻止滚动事件清除定时器
+                    if (osTop == 0) {
+                        clearInterval(timer);
+                    }
+                }, 30);
+            }
+            var maframe = document.getElementById("webchatmoor");
+            var mydoc = maframe.contentDocument;
+            var btnclose = mydoc.getElementById("btnClose");
+            btnclose.onclick = function () { maframe.style.display = ""; };
+
+        }
+
+        function changerweix() {
+            document.getElementById("weix").style.display = "block";
+        }
+
+        function changerweix2() {
+            document.getElementById("weix").style.display = "none";
+        }
+        $(function () {
+            //				function over(){
+            //					if(!$("#a2").is(":visible")){
+            //						$("#a2").css({display:"block",opacity:"1"});
+            //					}
+            //					else{
+            //						$("#a2").hide();
+            //					}
+            //				}
+            //
+            //				$(".footer-app").hover(over,over)
+            $(".footer-app").hover(function () {
+                if (!$("#a2").is(":visible")) {
+                    $("#a2").css({
+                        display: "block"
+                    }, { position: "absolute" });
+                } else {
+                    $("#a2").hide();
+                }
+            });
+            $("#feebback-icon").click(function () {
+                $("#webchatmoor").css({ display: "block" })
+            });
+            $(".click-li").click(function () {
+                $(this).siblings("li").removeClass("active");
+                $(this).addClass("active");
+
+            });
+            
+        }); //end
+        function Secondpage() {
+            $("#center-body").load("/abeta/Raiders");
+        }
+    </script>
+</body>
+</html>

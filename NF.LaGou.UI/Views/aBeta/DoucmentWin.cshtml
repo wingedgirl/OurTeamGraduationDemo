@@ -1,0 +1,431 @@
+﻿@{
+    ViewBag.Title = "DoucmentWin";
+}
+<script src="~/Scripts/jquery-1.8.2.js"></script>
+<style>
+    * {
+        padding: 0;
+        margin: 0;
+        border: 0;
+    }
+
+    body {
+        font-size: 14px;
+        line-height: 1.5;
+        background-color: white;
+        font-family: "Hiragino Sans GB","Microsoft Yahei",SimSun,Arial,"Helvetica Neue",Helvetica;
+    }
+
+    ul {
+        list-style-type: disc;
+        -webkit-margin-after: 1em;
+        -webkit-margin-start: 0px;
+        -webkit-margin-end: 0px;
+    }
+
+    li {
+        display: list-item;
+        list-style: none;
+        text-align: -webkit-match-parent;
+    }
+
+    h3 {
+        display: block;
+        -webkit-margin-before: 1em;
+        -webkit-margin-after: 1em;
+        -webkit-margin-start: 0px;
+        -webkit-margin-end: 0px;
+    }
+
+    textarea {
+        font-family: monospace;
+        border-color: rgb(169, 169, 169);
+    }
+
+    #fireChat {
+        display: none;
+    }
+
+    .hreader {
+        height: 46px;
+        line-height: 46px;
+        color: #fff;
+        text-align: center;
+        background: url(/yipaiimage/logo_9c7dcca.png) 20px 12px no-repeat #00b38a;
+        background-size: 60px 22px;
+        border-top-left-radius: 3px;
+        border-top-right-radius: 3px;
+        position: relative;
+    }
+
+        .hreader .btns {
+            padding: 15px 0;
+            height: 16px;
+            display: block;
+            overflow: hidden;
+            right: 0;
+            top: 0;
+            position: absolute;
+        }
+
+    .icon-base {
+        margin: 0 16px 0 0;
+        width: 16px;
+        height: 16px;
+        background-size: 16px 16px;
+        vertical-align: top;
+        cursor: pointer;
+        display: inline-block;
+    }
+
+    .min {
+        background: url(/yipaiimage/minimize_d3a54c4.png);
+    }
+
+    .close {
+        background: url(/yipaiimage/close_aa55638.png);
+    }
+
+    .content {
+        margin: 0 0 2px;
+        border-top-width: 0;
+        border: 1px solid #e8e8e8;
+    }
+
+    .chat .scroll-wrapper {
+        width: 100%;
+        height: 298px;
+    }
+
+    .mCustomScroll {
+        touch-action: pinch-zoom;
+    }
+
+    .mCustomScrollBox {
+        position: relative;
+        overflow: hidden;
+        height: 100%;
+        max-width: 100%;
+        outline: 0;
+        direction: ltr;
+    }
+
+    .mCSB_inside > .mCSB-container {
+        margin-right: 20px;
+    }
+
+    .mCSB-container {
+        overflow: hidden;
+        width: auto;
+        height: auto;
+    }
+
+    .chat .chat-list {
+        padding: 0 10px 0 20px;
+        overflow-y: visible;
+        list-style: none;
+    }
+
+        .chat .chat-list .left {
+            text-align: left;
+        }
+
+        .chat .chat-list .chat-item {
+            margin: 10px 0;
+            width: 100%;
+            font-size: 14px;
+            line-height: 1.5;
+            text-align: justify;
+        }
+
+    .chat .title {
+        margin: 6px 0;
+        color: #666;
+        font-size: 12px;
+    }
+
+    .content .title {
+        margin: 0;
+        padding: 0;
+        line-height: 1;
+        color: #333;
+        font-size: 14px;
+        font-weight: 400;
+    }
+
+    .chat .chat-list .lg {
+        color: #333333;
+        background-color: #f4f4f4;
+    }
+
+    .chat .chat-list p {
+        padding: 8px 10px;
+        max-width: 240px;
+        border-radius: 6px;
+        display: inline-block;
+        position: relative;
+    }
+
+    .chat .chat-list .system {
+        line-height: 1.5;
+        color: #d2d2d2;
+        font-size: 12px;
+        text-align: center;
+    }
+
+    .mCSB_scrollTools {
+        opacity: .75;
+        position: absolute;
+        width: 16px;
+        height: auto;
+        left: auto;
+        top: 0;
+        right: 0;
+        bottom: 0;
+    }
+
+        .mCSB_scrollTools .mCSB_draggerContainer {
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            height: auto;
+        }
+
+        .mCSB_scrollTools .mCSB_dragger {
+            cursor: pointer;
+            width: 100%;
+            height: 30px;
+            z-index: 1;
+        }
+
+            .mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
+                background-color: rgba(0,0,0,.4);
+                position: relative;
+                width: 4px;
+                height: 100%;
+                margin: 0 auto;
+                -webkit-border-radius: 16px;
+                -moz-border-radius: 16px;
+                border-radius: 16px;
+                text-align: center;
+            }
+
+        .mCSB_scrollTools .mCSB_draggerRail {
+            background-color: rgba(255,255,255,.75);
+            width: 2px;
+            height: 100%;
+            margin: 0 auto;
+            -webkit-border-radius: 16px;
+            -moz-border-radius: 16px;
+            border-radius: 16px;
+        }
+
+    .chat .toolbox {
+        margin: 40px 0 0;
+        border-top: 1px solid #e8e8e8;
+        position: relative;
+    }
+
+        .chat .toolbox .emoji {
+            background: url(/yipaiimage/face-icon.png) center center no-repeat #999;
+            background-size: 22px 20px;
+        }
+
+        .chat .toolbox .icon-base {
+            margin: 9px 0 9px 9px;
+            width: 22px;
+            height: 20px;
+            background-color: #999;
+        }
+
+            .chat .toolbox .icon-base:hover {
+                background-color: #00b38a;
+            }
+
+        .chat .toolbox ul {
+            width: 100%;
+            background-color: #fff;
+            z-index: 1;
+            left: 0;
+            position: absolute;
+        }
+
+            .chat .toolbox ul li {
+                margin: 4px 2px;
+                width: 25px;
+                height: 25px;
+                display: inline-block;
+            }
+
+        .chat .toolbox .text {
+            margin: 9px 20px 0 0;
+            color: #666;
+            line-height: 20px;
+            cursor: pointer;
+            float: right;
+        }
+
+    .chat .char-text {
+        margin: 0;
+        padding: 10px 8px;
+        width: 100%;
+        height: 64px;
+        font-size: 12px;
+        line-height: 1.5;
+        border-width: 0;
+        box-sizing: border-box;
+        overflow: hidden;
+    }
+
+    .chat .submit {
+        float: right;
+        color: #999999;
+    }
+
+        .chat .submit .submit-msg {
+            margin: 0 4px 0 12px;
+            padding: 12px 24px;
+            height: 100%;
+            color: #fff;
+            background-color: #00b38a;
+            border-radius: 2px;
+            display: inline-block;
+            cursor: pointer;
+        }
+</style>
+	</head>
+<body>
+    <span id="fireChat">初始化聊天窗口</span>
+    <div class="hreader">
+        <span class="connect" style="display: none;">连接中...</span>
+        <!--<span class="btns"  onclick="closewin()">
+            <i class="icon-base min"></i>
+            <i class="icon-base close"></i>
+        </span>-->
+
+        <span class="btns" id="btnClose">
+            <i class="icon-base min"></i>
+            <i class="icon-base close"></i>
+        </span>
+    </div>
+    <div class="content chat" style="display: block;">
+        <div class="scroll-wrapper mCustomScroll _mCs1">
+            <div id="mCSB-1" class="mCustomScrollBox mCS-light mCSB_vertical mCSB_inside" tabindex="0" style="max-height: none;">
+                <div id="mCSB-1-container" class="mCSB-container" style="position: relative;top:0xp;left: 0px;" dir="ltr">
+                    <ul class="chat-list">
+                        <li class="chat-item left">
+                            <h3 class="title">拉勾网</h3>
+                            <p class="lg">尊敬的用户您好，请问有什么可以帮助您的！</p>
+                        </li>
+                        <li class="chat-item left">
+                            <h3 class="title">拉勾网</h3>
+                            <p class="lg">您好，请问有什么可以帮到您？</p>
+                        </li>
+                        <li class="chat-item left">
+                            <h3 class="title">拉勾网</h3>
+                            <p class="lg">尊敬的用户您好，请问有什么可以帮助您的！</p>
+                        </li>
+                        <li class="chat-item system"> ——&copy;以上是历史消息&copy;—— </li>
+                    </ul>
+                </div>
+                <div id="mCSB-1-scrollbar-ver" class="mCSB_scrollTools mCSB_1_scrollbar mCS-light mCSB_scrollTools_vertical" style="display: block;">
+                    <div class="mCSB_draggerContainer">
+                        <div id="mCSB_1_dragger_vertical" class="mCSB_dragger" style="position: absolute; min-height: 30px; height: 6px; top: 0px; display: block; max-height: 288px;">
+                            <div class="mCSB_dragger_bar" style="line-height: 30px;"></div>
+                        </div>
+                        <div class="mCSB_draggerRail">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="toolbox">
+            <i class="icon-base emoji" id="emojiBtn">
+                <style type="text/css">
+                    .emoji-face {
+                        width: 25px;
+                        height: 25px;
+                        background-repeat: no-repeat;
+                        display: inline-block;
+                        cursor: pointer;
+                        background-image: url(/yipaiimage/emoji.png);
+                    }
+                </style>
+                <ul style="top: -137px; display: none;" class="emoji-ul">
+                    <li title="smile"><span class="emoji-face" onclick="window.getEmojiCode(':smile:')" title="smile" style="background-position: 0px 0px;"></span></li>
+                    <li title="smiley"><span class="emoji-face" onclick="window.getEmojiCode(':smiley:')" title="smiley" style="background-position: -25px 0px;"></span></li>
+                    <li title="laughing"><span class="emoji-face" onclick="window.getEmojiCode(':laughing:')" title="laughing" style="background-position: -50px 0px;"></span></li>
+                    <li title="blush"><span class="emoji-face" onclick="window.getEmojiCode(':blush:')" title="blush" style="background-position: -75px 0px;"></span></li>
+                    <li title="heart_eyes"><span class="emoji-face" onclick="window.getEmojiCode(':heart_eyes:')" title="heart_eyes" style="background-position: 0px -25px;"></span></li>
+                    <li title="smirk"><span class="emoji-face" onclick="window.getEmojiCode(':smirk:')" title="smirk" style="background-position: -25px -25px;"></span></li>
+                    <li title="flushed"><span class="emoji-face" onclick="window.getEmojiCode(':flushed:')" title="flushed" style="background-position: -50px -25px;"></span></li>
+                    <li title="kissing_heart"><span class="emoji-face" onclick="window.getEmojiCode(':kissing_heart:')" title="kissing_heart" style="background-position: -75px -25px;"></span></li>
+                    <li title="grin"><span class="emoji-face" onclick="window.getEmojiCode(':grin:')" title="grin" style="background-position: 0px -50px;"></span></li>
+                    <li title="wink"><span class="emoji-face" onclick="window.getEmojiCode(':wink:')" title="wink" style="background-position: -25px -50px;"></span></li>
+                    <li title="stuck_out_tongue_winking_eye"><span class="emoji-face" onclick="window.getEmojiCode(':stuck_out_tongue_winking_eye:')" title="stuck_out_tongue_winking_eye" style="background-position: -50px -50px;"></span></li>
+                    <li title="stuck_out_tongue_closed eyes"><span class="emoji-face" onclick="window.getEmojiCode(':stuck_out_tongue_closed eyes:')" title="stuck_out_tongue_closed eyes" style="background-position: -75px -50px;"></span></li>
+                    <li title="sleeping"><span class="emoji-face" onclick="window.getEmojiCode(':sleeping:')" title="sleeping" style="background-position: 0px -75px;"></span></li>
+                    <li title="worried"><span class="emoji-face" onclick="window.getEmojiCode(':worried:')" title="worried" style="background-position: -25px -75px;"></span></li>
+                    <li title="expressionless"><span class="emoji-face" onclick="window.getEmojiCode(':expressionless:')" title="expressionless" style="background-position: -50px -75px;"></span></li>
+                    <li title="sweat_smile"><span class="emoji-face" onclick="window.getEmojiCode(':sweat_smile:')" title="sweat_smile" style="background-position: -75px -75px;"></span></li>
+                    <li title="joy"><span class="emoji-face" onclick="window.getEmojiCode(':joy:')" title="joy" style="background-position: 0px -100px;"></span></li>
+                    <li title="cold_sweat"><span class="emoji-face" onclick="window.getEmojiCode(':cold_sweat:')" title="cold_sweat" style="background-position: -25px -100px;"></span></li>
+                    <li title="sob"><span class="emoji-face" onclick="window.getEmojiCode(':sob:')" title="sob" style="background-position: -50px -100px;"></span></li>
+                    <li title="angry"><span class="emoji-face" onclick="window.getEmojiCode(':angry:')" title="angry" style="background-position: -75px -100px;"></span></li>
+                    <li title="mask"><span class="emoji-face" onclick="window.getEmojiCode(':mask:')" title="mask" style="background-position: 0px -125px;"></span></li>
+                    <li title="scream"><span class="emoji-face" onclick="window.getEmojiCode(':scream:')" title="scream" style="background-position: -25px -125px;"></span></li>
+                    <li title="sunglasses"><span class="emoji-face" onclick="window.getEmojiCode(':sunglasses:')" title="sunglasses" style="background-position: -50px -125px;"></span></li>
+                    <li title="heart"><span class="emoji-face" onclick="window.getEmojiCode(':heart:')" title="heart" style="background-position: -75px -125px;"></span></li>
+                    <li title="broken_heart"><span class="emoji-face" onclick="window.getEmojiCode(':broken_heart:')" title="broken_heart" style="background-position: 0px -150px;"></span></li>
+                    <li title="star"><span class="emoji-face" onclick="window.getEmojiCode(':star:')" title="star" style="background-position: -25px -150px;"></span></li>
+                    <li title="anger"><span class="emoji-face" onclick="window.getEmojiCode(':anger:')" title="anger" style="background-position: -50px -150px;"></span></li>
+                    <li title="exclamation"><span class="emoji-face" onclick="window.getEmojiCode(':exclamation:')" title="exclamation" style="background-position: -75px -150px;"></span></li>
+                    <li title="question"><span class="emoji-face" onclick="window.getEmojiCode(':question:')" title="question" style="background-position: 0px -175px;"></span></li>
+                    <li title="zzz"><span class="emoji-face" onclick="window.getEmojiCode(':zzz:')" title="zzz" style="background-position: -25px -175px;"></span></li>
+                    <li title="thumbsup"><span class="emoji-face" onclick="window.getEmojiCode(':thumbsup:')" title="thumbsup" style="background-position: -50px -175px;"></span></li>
+                    <li title="thumbsdown"><span class="emoji-face" onclick="window.getEmojiCode(':thumbsdown:')" title="thumbsdown" style="background-position: -75px -175px;"></span></li>
+                    <li title="ok_hand"><span class="emoji-face" onclick="window.getEmojiCode(':ok_hand:')" title="ok_hand" style="background-position: 0px -200px;"></span></li>
+                    <li title="punch"><span class="emoji-face" onclick="window.getEmojiCode(':punch:')" title="punch" style="background-position: -25px -200px;"></span></li>
+                    <li title="yeah"><span class="emoji-face" onclick="window.getEmojiCode(':yeah:')" title="yeah" style="background-position: -50px -200px;"></span></li>
+                    <li title="clap"><span class="emoji-face" onclick="window.getEmojiCode(':clap:')" title="clap" style="background-position: -75px -200px;"></span></li>
+                    <li title="muscle"><span class="emoji-face" onclick="window.getEmojiCode(':muscle:')" title="muscle" style="background-position: 0px -225px;"></span></li>
+                    <li title="pray"><span class="emoji-face" onclick="window.getEmojiCode(':pray:')" title="pray" style="background-position: -25px -225px;"></span></li>
+                    <li title="skull"><span class="emoji-face" onclick="window.getEmojiCode(':skull:')" title="skull" style="background-position: -50px -225px;"></span></li>
+                    <li title="trollface"><span class="emoji-face" onclick="window.getEmojiCode(':trollface:')" title="trollface" style="background-position: -75px -225px;"></span></li>
+                </ul>
+            </i>
+            <i class="icon-base image" id="uploadImage" style="position: relative;">
+                <img src="/yipaiimage/image-icon.png" width="22px" height="20px" />
+            </i>
+            <i class="icon-base file" style="display:none ;">
+                <img src="/yipaiimage/file-icon.png" width="22px" height="20px" alt="上传文件" />
+            </i>
+            <span class="text">留言</span>
+        </div>
+        <textarea id="charText" name="charText" class="char-text" placeholder="您好，你有什么问题需要反馈"></textarea>
+        <div class="submit">
+            快捷键: Enter
+            <input type="button" name="sumbit" class="submit-msg" value="发送" />
+        </div>
+    </div>
+    <script type="text/javascript">
+
+        function closewin() {
+            //console.log(this);
+            //document.getElementById("webchatmoor").style.display="none";
+            //this.close();
+        }
+
+        $(function () {
+            $("#emojiBtn").click(function () {
+                var ul = $(".emoji-ul");
+                if (ul.css("display") == "none")
+                    ul.css({ display: "block" });
+                else
+                    ul.css({ display: "none" });
+            });
+        });
+
+ </script>
