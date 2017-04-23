@@ -15,7 +15,7 @@
             </div>
             <ul class="nav">
                 <li><a href="/Beta/DefaultIndex">首页</a></li>
-                <li><a href="/Beta/ItemList">项目</a></li>
+                <li onclick="backItems()"><a href="/Beta/ItemList">项目</a></li>
                 <li class="active" style="color:black;"><a href="/Beta/NewbieGuide">新手指南</a></li>
             </ul>
             <div class="entry">
@@ -39,7 +39,7 @@
             </div>
         </div>
     </div>
-    <div id="content">
+    <div id="center-body">
         @RenderBody()
     </div>
     <div id="footer">
@@ -110,6 +110,10 @@
         //    $(".nav").children().not($(".nav").children().first().next()).removeClass("active");
         //});
 
+
+        function backItems() {
+            $("#center-body").load("/Beta/ItemList");
+        };
     </script>
 </body>
 </html>
