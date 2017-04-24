@@ -279,7 +279,158 @@
             font-style: normal;
             background: url(/yipaiimage/icon_step_tip.png) no-repeat;
         }
+    .m-carousel {
+        position: relative;
+        overflow: hidden;
+        width: 100%;
+        height: 360px;
+        margin: 0 auto;
+        background: url(/yipaiimage/carousel_bg.png) 0 0 no-repeat;
+        background-size: cover;
+    }
 
+        .m-carousel .list {
+            position: absolute;
+            width: 600%;
+            height: 360px;
+            z-index: 1;
+        }
+
+            .m-carousel .list .item {
+                position: relative;
+                float: left;
+                width: 16.66666667%;
+                height: 360px;
+            }
+
+        .m-carousel .carousel-content {
+            position: absolute;
+            top: 72px;
+            left: 50%;
+            width: 954px;
+            margin-left: -477px;
+        }
+
+    .clearfix {
+        display: block !important;
+    }
+
+        .clearfix:before {
+            content: " ";
+            display: table;
+        }
+
+    .m-carousel .clearfix:after {
+        visibility: hidden;
+        display: block;
+        overflow: hidden;
+        height: 0;
+        font-size: 0;
+        content: '.';
+        clear: both;
+    }
+
+    .clearfix:after {
+        content: "";
+        height: 0;
+        clear: both;
+        visibility: hidden;
+    }
+
+    .m-carousel .carousel-content .head-icon4 {
+        background: url(/yipaiimage/head_icon4.png) 0 0 no-repeat;
+    }
+
+    .m-carousel .carousel-content .head-icon1 {
+        background: url(/yipaiimage/head_icon1.png) 0 0 no-repeat;
+    }
+
+    .m-carousel .carousel-content .head-icon2 {
+        background: url(/yipaiimage/head_icon2.png) 0 0 no-repeat;
+    }
+
+    .m-carousel .carousel-content .head-icon3 {
+        background: url(/yipaiimage/head_icon3.png) 0 0 no-repeat;
+    }
+
+    .m-carousel .carousel-content .head {
+        float: left;
+        width: 194px;
+        height: 194px;
+    }
+
+    .m-carousel .carousel-caption {
+        float: left;
+        padding-left: 48px;
+        padding-top: 34px;
+    }
+
+    ..m-carousel .carousel-caption .left-quot {
+        float: left;
+        width: 19px;
+        height: 16px;
+        margin-right: 10px;
+        margin-top: 4px;
+        background: url(/yipaiimage/home_match_icon.png) 0 0 no-repeat;
+    }
+
+    .m-carousel .carousel-caption .paragraphs {
+        float: left;
+        width: 683px;
+    }
+
+    .m-carousel .carousel-caption .author {
+        font-size: 14px;
+        text-align: right;
+    }
+
+    .m-carousel .carousel-caption p {
+        font: 16px/24px '微软雅黑';
+        color: #fff;
+    }
+
+    .m-carousel .carousel-caption .right-quot {
+        display: inline-block;
+        width: 19px;
+        height: 16px;
+        margin-left: 10px;
+        vertical-align: middle;
+        background: url(/yipaiimage/home_match_icon.png) -29px 0 no-repeat;
+    }
+
+    .m-carousel .prev {
+        left: 50px;
+        background: url(/yipaiimage/home_match_icon.png) -36px -26px no-repeat;
+    }
+
+    .m-carousel .next {
+        right: 50px;
+        background: url(/yipaiimage/home_match_icon.png) 0 -26px no-repeat;
+    }
+
+    .m-carousel .arrow {
+        display: block;
+        position: absolute;
+        top: 50%;
+        width: 26px;
+        height: 50px;
+        margin-top: -25px;
+        line-height: 39px;
+        text-align: center;
+        font-size: 36px;
+        font-weight: 700;
+        z-index: 2;
+        color: #fff;
+        cursor: pointer;
+    }
+
+        .m-carousel .arrow.next:hover {
+            background: url(/yipaiimage/home_match_icon.png) 0 -86px no-repeat;
+        }
+
+        .m-carousel .arrow.prev:hover {
+            background: url(/yipaiimage/home_match_icon.png) -36px -86px no-repeat;
+        }
 
 
 </style>
@@ -338,7 +489,112 @@
     </div>
 </div>
 <div class="m-carousel">
-
+    <div class="list" style="left:-1347px">
+        <div class="item">
+            <div class="carousel-content clearfix">
+                <div class="head head-icon4"></div>
+                <div class="carousel-caption clearfix">
+                    <div class="left-quot"></div>
+                    <div class="paragraphs">
+                        <p class="second-paragraph">
+                            在一拍被“拍卖”的经历让我很惊喜，我的一拍职业顾问Micheal告诉我，我当时成为了一拍有史以来收到邀约数最多的候选人，并打破了候选人收到offer速度的记录，从上专场到拿到offer只用了20个小时。仅仅面试了一家公司，我就找到了对味的团队。一拍对我来说已经不是一个找工作的工具这么简单，5月19日这天我在一拍上所经历的，可能已经影响了我的人生轨迹。
+                            <span class="right-quot"></span>
+                        </p>
+                        <br>
+                        <br>
+                        <p class="author">—— 王学兵·前端开发工程师·罗辑思维</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="item">
+            <div class="carousel-content clearfix">
+                <div class="head head-icon1"></div>
+                <div class="carousel-caption clearfix">
+                    <div class="left-quot"></div>
+                    <div class="paragraphs">
+                        <p class="second-paragraph">
+                            这是我3年来第一次上招聘网站找工作，很幸运申请上了一拍，遇见职业顾问Yolanda。我的简历在一拍上展示了一天，收到不少企业的邀约，面试后的第二天就收到了offer，并且我很满意。Yolanda告诉我，拉勾一拍是终身服务，无论是在职场还是生活，遇到问题都可以找她。我发现自己不仅拥有了一个私人顾问，还多了一个朋友。
+                            <span class="right-quot"></span>
+                        </p>
+                        <br>
+                        <br>
+                        <p class="author">—— 陈果·高级服务器开发工程师·友加</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="item">
+            <div class="carousel-content clearfix">
+                <div class="head head-icon2"></div>
+                <div class="carousel-caption clearfix">
+                    <div class="left-quot"></div>
+                    <div class="paragraphs">
+                        <p class="second-paragraph">
+                            近期考虑到自身发展，我计划到北京工作。一拍私人职业顾问Jessica找到我，想推荐我上一拍专场，我就抱着试试的心态报名了，没想到收到了好几十个面试邀请。工作这么久，多少有了解过其他招聘网站，一拍无论是在求职流程，还是简历中获取的信息，会更加突出一些，特别是提供私人顾问这样的服务，这种模式让求职者不再处于弱势地位。
+                            <span class="right-quot"></span>
+                        </p>
+                        <br>
+                        <br>
+                        <p class="author">—— 李明·前端开发工程师·象辑科技</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="item">
+            <div class="carousel-content clearfix">
+                <div class="head head-icon3"></div>
+                <div class="carousel-caption clearfix">
+                    <div class="left-quot"></div>
+                    <div class="paragraphs">
+                        <p class="second-paragraph">
+                            在一拍还没有开放的时候我就知道一拍了，开放使用后我就报了名。我刚毕业的时候就到上家公司工作，一呆就是4年，求职经验少得可怜。在遇到一拍之后，职业顾问Jessica给予了我很多鼓励和陪伴，帮我解答很多职业困惑，让我慢慢放下了心理负担，她的专业影响了我。从一拍的申请到我最终入职，只用了一周时间，有些不可思议。
+                            <span class="right-quot"></span>
+                        </p>
+                        <br>
+                        <br>
+                        <p class="author">—— 丁杨洋·产品运营主管·恒昌利通</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="item">
+            <div class="carousel-content clearfix">
+                <div class="head head-icon4"></div>
+                <div class="carousel-caption clearfix">
+                    <div class="left-quot"></div>
+                    <div class="paragraphs">
+                        <p class="second-paragraph">
+                            在一拍被“拍卖”的经历让我很惊喜，我的一拍职业顾问Micheal告诉我，我当时成为了一拍有史以来收到邀约数最多的候选人，并打破了候选人收到offer速度的记录，从上专场到拿到offer只用了20个小时。仅仅面试了一家公司，我就找到了对味的团队。一拍对我来说已经不是一个找工作的工具这么简单，5月19日这天我在一拍上所经历的，可能已经影响了我的人生轨迹。
+                            <span class="right-quot"></span>
+                        </p>
+                        <br>
+                        <br>
+                        <p class="author">—— 王学兵·前端开发工程师·罗辑思维</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="item">
+            <div class="carousel-content clearfix">
+                <div class="head head-icon1"></div>
+                <div class="carousel-caption clearfix">
+                    <div class="left-quot"></div>
+                    <div class="paragraphs">
+                        <p class="second-paragraph">
+                            这是我3年来第一次上招聘网站找工作，很幸运申请上了一拍，遇见职业顾问Yolanda。我的简历在一拍上展示了一天，收到不少企业的邀约，面试后的第二天就收到了offer，并且我很满意。Yolanda告诉我，拉勾一拍是终身服务，无论是在职场还是生活，遇到问题都可以找她。我发现自己不仅拥有了一个私人顾问，还多了一个朋友。
+                            <span class="right-quot"></span>
+                        </p>
+                        <br>
+                        <br>
+                        <p class="author">—— 陈果·高级服务器开发工程师·友加</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <a href="javascript:" class="arrow prev" onclick="imagePrev()"></a>
+    <a href="javascript:" class="arrow next" onclick="imageNext()"></a>
 </div>
 <div class="part part1">
     <h2>一拍流程</h2>
@@ -375,3 +631,61 @@
 
     </div>
 </div>
+<script>
+    //window.onload = (function () {
+        var container = document.getElementsByClassName("m-carousel")[0];
+        var list = document.getElementsByClassName("list")[0];
+        var next = document.getElementsByClassName("next")[0];
+        var prev = document.getElementsByClassName("prev")[0];
+
+        var animated = false;
+        var timer;
+
+        function animate(offset) {
+            animated = true;
+            var newLeft = parseInt(list.style.left) + offset;
+            var time = 400; //位移的总时间
+            var interval = 10; //位移的时间间隔
+            var speed = offset / (time / interval); //每次位移量
+
+            function goimage() {
+                if ((speed < 0 && parseInt(list.style.left) > newLeft) || (speed > 0 && parseInt(list.style.left) < newLeft)) {
+                    list.style.left = parseInt(list.style.left) + speed + "px";
+                    setTimeout(goimage, interval);
+                } else {
+                    animated = false;
+                    list.style.left = newLeft + "px";
+                    if (newLeft > -1347) {
+                        list.style.left = -5388 + "px";
+                    }
+                    if (newLeft < -5388) {
+                        list.style.left = -1347 + "px";
+                    }
+                }
+            }
+            goimage();
+        }
+        function play() {
+            timer = setInterval(function () {
+                next.onclick();
+            }, 3000);
+        }
+        function stop() {
+            clearInterval(timer);
+        }
+        function imageNext(){
+            if(!animated){
+                animate(-1347);
+            }
+        }
+        function imagePrev(){
+            if (!animated) {
+                animate(1347);
+            }
+         }
+        container.onmousemove = stop;
+        container.onmouseout = play;
+
+        play();
+    //});
+</script>
